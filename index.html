@@ -9,6 +9,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<style>
+  html, body { max-width: 100%; overflow-x: hidden; }
+  .process-override { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; }
+  @media(max-width:768px) {
+    .process-override { grid-template-columns:1fr; }
+  }
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -410,7 +417,7 @@
       <p>A transparent four-step process. You know exactly where your order is from the moment you send the brief to the day it arrives at your door.</p>
     </div>
 
-    <div class="process" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bone,#f0ede8);">
+    <div class="process process-override">
       <div class="pstep">
         <div class="pstep-num">01 · BRIEF</div>
         <h4>Send the spec.</h4>
