@@ -14,10 +14,10 @@
    2.  Reset & Base Styles
    3.  Layout Primitives (.wrap, .eyebrow, etc.)
    4.  Navigation
-   5.  Hero
+   5.  Hero (homepage)
    6.  Ticker / Marquee
    7.  Section Generic
-   8.  Products Grid
+   8.  Products Grid (homepage preview cards)
    9.  Why Us / Stats
    10. Materials Grid
    11. Industries Tags
@@ -26,6 +26,13 @@
    14. Footer
    15. Sticky WhatsApp Button
    16. Animations
+   ----------------------------------------------------------------------------
+   PAGE-SPECIFIC SECTIONS (added as new pages are built):
+   17. Page Hero (used on inner pages — products, about, contact)
+   18. Product Deep-Dive Sections
+   19. Portfolio Gallery
+   20. Comparison Matrix
+   21. Sample Request Block
    ============================================================================ */
 
 
@@ -75,9 +82,6 @@ body {
 
 /* ============================================================================
    3. LAYOUT PRIMITIVES
-   ----------------------------------------------------------------------------
-   .wrap     — content max-width container, used on every section
-   .eyebrow  — small uppercase mono label above headlines
    ============================================================================ */
 .wrap { max-width: 1320px; margin: 0 auto; padding: 0 20px; }
 @media (min-width: 768px) { .wrap { padding: 0 32px; } }
@@ -197,7 +201,7 @@ body {
 
 
 /* ============================================================================
-   5. HERO
+   5. HERO (homepage)
    ============================================================================ */
 .hero {
   position: relative;
@@ -372,7 +376,6 @@ body {
 }
 .hero-stats .val .lime { color: var(--lime); }
 
-/* Hero visual panel — abstract product mockup rendered in CSS */
 .hero-visual {
   position: relative;
   aspect-ratio: 4/5;
@@ -547,7 +550,7 @@ body {
 
 
 /* ============================================================================
-   8. PRODUCTS GRID
+   8. PRODUCTS GRID (homepage preview cards)
    ============================================================================ */
 .products {
   display: grid;
@@ -768,7 +771,6 @@ body {
 }
 .matcard:hover .matcard-swatch { border-color: var(--paper); }
 
-/* Material swatch styles — visual representation of each substrate */
 .swatch-coated { background: linear-gradient(135deg, #fafafa 0%, #e5e5e5 100%); }
 .swatch-synthetic { background: linear-gradient(135deg, #ffffff 0%, #d4d4d4 100%); }
 .swatch-bopp {
@@ -808,9 +810,7 @@ body {
 }
 .matcard:hover .matcard-meta { color: #aaa; }
 
-.matgroup {
-  margin-bottom: 56px;
-}
+.matgroup { margin-bottom: 56px; }
 .matgroup:last-child { margin-bottom: 0; }
 .matgroup-head {
   display: flex;
@@ -1019,7 +1019,6 @@ body {
   transition: transform 0.2s;
 }
 
-/* Form (used inside Final CTA and Contact page) */
 .form-card {
   background: var(--ink);
   color: var(--paper);
@@ -1052,10 +1051,7 @@ body {
 }
 @media (min-width: 600px) { .form-row.two { grid-template-columns: 1fr 1fr; } }
 
-.form-field {
-  display: flex;
-  flex-direction: column;
-}
+.form-field { display: flex; flex-direction: column; }
 .form-field label {
   font-family: "JetBrains Mono", monospace;
   font-size: 10px;
@@ -1080,9 +1076,7 @@ body {
 }
 .form-field input:focus,
 .form-field select:focus,
-.form-field textarea:focus {
-  border-bottom-color: var(--lime);
-}
+.form-field textarea:focus { border-bottom-color: var(--lime); }
 .form-field select {
   appearance: none;
   -webkit-appearance: none;
@@ -1114,10 +1108,7 @@ body {
   justify-content: center;
   gap: 12px;
 }
-.form-submit:hover {
-  background: transparent;
-  color: var(--lime);
-}
+.form-submit:hover { background: transparent; color: var(--lime); }
 
 .form-disclaimer {
   margin-top: 14px;
@@ -1236,4 +1227,496 @@ body {
 }
 @keyframes fadeIn {
   to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ============================================================================
+   17. PAGE HERO (used on inner pages — products, about, contact)
+   ============================================================================ */
+.page-hero {
+  position: relative;
+  padding: 140px 0 60px;
+  border-bottom: 1px solid var(--rule);
+  overflow: hidden;
+}
+@media (min-width: 768px) { .page-hero { padding: 180px 0 80px; } }
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--rule) 1px, transparent 1px),
+    linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.4;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 30%, transparent 80%);
+}
+
+.page-hero-inner { position: relative; z-index: 2; }
+
+.page-hero .crumb {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--note);
+  margin-bottom: 28px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.page-hero .crumb a {
+  color: var(--note);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+.page-hero .crumb a:hover { color: var(--lime); }
+.page-hero .crumb .sep { color: var(--rule); }
+.page-hero .crumb .current { color: var(--paper); }
+
+.page-hero h1 {
+  font-size: clamp(42px, 7vw, 88px);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  margin-bottom: 24px;
+  max-width: 900px;
+}
+.page-hero h1 .hl {
+  background: var(--lime);
+  color: var(--ink);
+  padding: 0 8px;
+  display: inline-block;
+}
+.page-hero p {
+  font-size: clamp(15px, 1.6vw, 19px);
+  color: #B8B8B8;
+  max-width: 640px;
+  line-height: 1.55;
+  margin-bottom: 36px;
+}
+.page-hero p strong { color: var(--paper); font-weight: 600; }
+
+.page-hero-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+.page-hero-jump a {
+  border: 1px solid var(--rule);
+  padding: 12px 18px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--paper);
+  text-decoration: none;
+  transition: all 0.18s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.page-hero-jump a:hover {
+  background: var(--lime);
+  border-color: var(--lime);
+  color: var(--ink);
+}
+.page-hero-jump a .num {
+  color: var(--note);
+}
+.page-hero-jump a:hover .num { color: var(--ink); }
+
+
+/* ============================================================================
+   18. PRODUCT DEEP-DIVE SECTIONS
+   ----------------------------------------------------------------------------
+   Used on /products.html — one block per category (adhesive / shrink / hotmelt)
+   ============================================================================ */
+.dd-section {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--rule);
+}
+@media (min-width: 768px) { .dd-section { padding: 120px 0; } }
+
+.dd-section.bone {
+  background: var(--bone);
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+.dd-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-bottom: 56px;
+}
+@media (min-width: 1000px) {
+  .dd-header { grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start; }
+}
+
+.dd-header-l .dd-num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--note);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.dd-section.bone .dd-header-l .dd-num { color: var(--steel); }
+.dd-header-l .dd-num::before {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background: var(--lime);
+}
+
+.dd-header-l h2 {
+  font-size: clamp(36px, 6vw, 68px);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+.dd-header-l .lead {
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.55;
+  color: #B8B8B8;
+  margin-bottom: 24px;
+  max-width: 540px;
+}
+.dd-section.bone .dd-header-l .lead { color: var(--steel); }
+
+.dd-bullets {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin-bottom: 0;
+}
+.dd-bullets li {
+  font-size: 14px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+.dd-bullets li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--lime);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.dd-specbox {
+  border: 1px solid var(--rule);
+  background: var(--graphite);
+  padding: 28px;
+}
+.dd-section.bone .dd-specbox {
+  border-color: var(--ink);
+  background: var(--paper);
+}
+.dd-specbox-head {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--note);
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--rule);
+}
+.dd-section.bone .dd-specbox-head {
+  color: var(--steel);
+  border-bottom-color: var(--ink);
+}
+.dd-specrow {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 13px;
+  gap: 12px;
+}
+.dd-section.bone .dd-specrow { border-bottom-color: var(--mute); }
+.dd-specrow:last-child { border-bottom: none; }
+.dd-specrow .k {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--note);
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+.dd-section.bone .dd-specrow .k { color: var(--steel); }
+.dd-specrow .v {
+  font-weight: 600;
+  text-align: right;
+  font-size: 13px;
+}
+
+.dd-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+
+/* Subsection title (e.g. "Substrates" / "Portfolio") inside a deep dive */
+.dd-subhead {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--note);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+.dd-section.bone .dd-subhead {
+  color: var(--steel);
+  border-bottom-color: var(--ink);
+}
+.dd-subhead .count {
+  color: var(--paper);
+  font-weight: 700;
+}
+.dd-section.bone .dd-subhead .count { color: var(--ink); }
+
+.dd-block { margin-bottom: 64px; }
+.dd-block:last-child { margin-bottom: 0; }
+
+
+/* ============================================================================
+   19. PORTFOLIO GALLERY
+   ----------------------------------------------------------------------------
+   Tight grid of product example cards. Each card has a visual + industry tag.
+   When real photography is available, swap the inner <svg> for an <img> tag.
+   ============================================================================ */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+@media (min-width: 600px) { .portfolio-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1000px) { .portfolio-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.pf-card {
+  border: 1px solid var(--rule);
+  background: var(--graphite);
+  overflow: hidden;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.dd-section.bone .pf-card {
+  border-color: var(--ink);
+  background: var(--paper);
+}
+.pf-card:hover {
+  border-color: var(--lime);
+  transform: translateY(-2px);
+}
+
+.pf-visual {
+  aspect-ratio: 1;
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.pf-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(135deg, transparent 0 12px, rgba(198,255,0,0.03) 12px 13px);
+  pointer-events: none;
+}
+/* The SVG product mockup itself */
+.pf-visual svg {
+  width: 65%;
+  height: 65%;
+  position: relative;
+  z-index: 1;
+}
+/* When swapped for real images later */
+.pf-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.pf-meta {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pf-tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--lime);
+}
+.dd-section.bone .pf-tag { color: var(--steel); }
+.pf-name {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  color: var(--paper);
+}
+.dd-section.bone .pf-name { color: var(--ink); }
+
+
+/* ============================================================================
+   20. COMPARISON MATRIX
+   ----------------------------------------------------------------------------
+   A decision-aid table: which product type is right for the buyer?
+   Three columns side-by-side, scrolls horizontally on mobile.
+   ============================================================================ */
+.compare {
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  overflow-x: auto;
+}
+.compare-grid {
+  display: grid;
+  grid-template-columns: 200px repeat(3, minmax(180px, 1fr));
+  min-width: 760px;
+}
+
+.compare-cell {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--mute);
+  border-right: 1px solid var(--mute);
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.compare-cell:nth-child(4n) { border-right: none; }
+.compare-cell.row-h {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--steel);
+  background: var(--bone);
+  font-weight: 700;
+}
+.compare-cell.col-h {
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  background: var(--ink);
+  color: var(--paper);
+  border-bottom-color: var(--ink);
+  padding: 22px 20px;
+}
+.compare-cell.col-h .num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--lime);
+  margin-bottom: 6px;
+  display: block;
+}
+.compare-cell.empty {
+  background: var(--ink);
+  border-bottom-color: var(--ink);
+}
+.compare-cell .check {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--lime);
+  margin-right: 8px;
+  position: relative;
+  flex-shrink: 0;
+}
+.compare-cell .check::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 4px;
+  width: 4px;
+  height: 8px;
+  border: solid var(--ink);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.compare-cell .dash {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--mute);
+  border-radius: 50%;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+
+/* ============================================================================
+   21. SAMPLE REQUEST BLOCK
+   ----------------------------------------------------------------------------
+   Mid-page conversion block: "Order a sample pack."
+   ============================================================================ */
+.sample-block {
+  background: var(--ink);
+  border: 1px solid var(--rule);
+  padding: 40px 32px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-top: 64px;
+}
+@media (min-width: 800px) {
+  .sample-block {
+    grid-template-columns: 1fr auto;
+    padding: 48px 40px;
+    gap: 32px;
+  }
+}
+.sample-block h3 {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin-bottom: 8px;
+}
+.sample-block h3 .hl {
+  background: var(--lime);
+  color: var(--ink);
+  padding: 0 6px;
+}
+.sample-block p {
+  font-size: 14px;
+  color: #B8B8B8;
+  line-height: 1.55;
+  max-width: 540px;
 }
