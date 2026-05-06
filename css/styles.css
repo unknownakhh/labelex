@@ -1412,9 +1412,6 @@ body {
 
 /* ============================================================================
    26. CONTACT — CHANNEL CARDS
-   ----------------------------------------------------------------------------
-   Three-card layout for the contact channels (WhatsApp, Form, Email).
-   WhatsApp card has lime background as the speed-recommended option.
    ============================================================================ */
 .channel-cards { display: grid; grid-template-columns: 1fr; gap: 16px; }
 @media (min-width: 768px) { .channel-cards { grid-template-columns: repeat(3, 1fr); gap: 0; border: 1.5px solid var(--paper); } }
@@ -1470,9 +1467,6 @@ body {
 
 /* ============================================================================
    27. CONTACT — QUOTE FORM (ADVANCED)
-   ----------------------------------------------------------------------------
-   Multi-step layout with conditional fields. Pill-style selectors,
-   number inputs for dimensions, dropdowns for options.
    ============================================================================ */
 .quote-form-block {
   background: var(--ink);
@@ -1513,12 +1507,7 @@ body {
 }
 .qf-step-header .qf-hint { font-size: 12px; color: var(--note); font-family: "JetBrains Mono", monospace; letter-spacing: 0.04em; }
 
-/* Pill selectors — used for label type, shape, quantity, substrate, finish */
-.qf-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
+.qf-pills { display: flex; flex-wrap: wrap; gap: 8px; }
 .qf-pill {
   padding: 12px 18px;
   border: 1.5px solid var(--rule);
@@ -1540,7 +1529,6 @@ body {
   font-weight: 700;
 }
 
-/* Field grouping in form steps */
 .qf-field-group { margin-bottom: 24px; }
 .qf-field-group:last-child { margin-bottom: 0; }
 .qf-field-group .qf-label {
@@ -1553,7 +1541,6 @@ body {
   display: block;
 }
 
-/* Dimension input row — width / height */
 .qf-dims {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1579,10 +1566,15 @@ body {
   font-weight: 600;
   width: 100%;
   outline: none;
+  appearance: textfield;
   -moz-appearance: textfield;
 }
 .qf-dim-input input::-webkit-outer-spin-button,
-.qf-dim-input input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.qf-dim-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
 .qf-dim-input .qf-unit {
   padding: 14px 16px;
   font-family: "JetBrains Mono", monospace;
@@ -1593,7 +1585,6 @@ body {
   border-left: 1.5px solid var(--rule);
 }
 
-/* Conditional block — type-specific options */
 .qf-conditional {
   max-height: 0;
   opacity: 0;
@@ -1607,7 +1598,6 @@ body {
   margin-top: 32px;
 }
 
-/* Standard form inputs */
 .qf-input-row {
   display: grid;
   grid-template-columns: 1fr;
@@ -1643,7 +1633,6 @@ body {
 .qf-input-group textarea:focus { border-bottom-color: var(--lime); }
 .qf-input-group textarea { resize: vertical; min-height: 100px; }
 
-/* Submit button — full width, lime, prominent */
 .qf-submit-row {
   padding: 36px 28px;
   background: var(--graphite);
@@ -1686,10 +1675,7 @@ body {
 .visit-grid { display: grid; grid-template-columns: 1fr; gap: 0; border: 1px solid var(--rule); }
 @media (min-width: 900px) { .visit-grid { grid-template-columns: 1fr 1fr; } }
 
-.visit-info {
-  padding: 40px 32px;
-  border-bottom: 1px solid var(--rule);
-}
+.visit-info { padding: 40px 32px; border-bottom: 1px solid var(--rule); }
 @media (min-width: 900px) { .visit-info { border-bottom: none; border-right: 1px solid var(--rule); padding: 56px 48px; } }
 
 .visit-info h3 {
@@ -1733,7 +1719,6 @@ body {
 }
 @media (min-width: 900px) { .visit-map { min-height: 100%; } }
 
-/* Static map placeholder — grid pattern with a lime location marker */
 .visit-map::before {
   content: "";
   position: absolute;
@@ -1870,9 +1855,7 @@ body {
   border-right: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
 }
-@media (min-width: 700px) and (max-width: 1099px) {
-  .hours-cell:nth-child(2n) { border-right: none; }
-}
+@media (min-width: 700px) and (max-width: 1099px) { .hours-cell:nth-child(2n) { border-right: none; } }
 @media (max-width: 699px) { .hours-cell { border-right: none; } }
 @media (min-width: 1100px) { .hours-cell:last-child { border-right: none; } }
 
