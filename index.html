@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Industrial Label Manufacturer Johannesburg | Labelex</title>
+<meta name="description" content="South African label manufacturer. Adhesive stickers, heat shrink sleeves, hot-melt glue labels. Built to spec, shipped nationwide. Get a quote today." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0E0E0E;
+    --graphite: #1C1C1C;
+    --steel: #2B2B2B;
+    --paper: #FFFFFF;
+    --bone: #F5F4EF;
+    --mute: #E8E7E2;
+    --rule: #2A2A2A;
+    --note: #8A8A8A;
+    --lime: #C6FF00;
+    --lime-deep: #A8DC00;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    background: var(--ink);
+    color: var(--paper);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+  .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+
+  /* ============================================================
+     LAYOUT PRIMITIVES
+     ============================================================ */
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 20px; }
+  @media (min-width: 768px) { .wrap { padding: 0 32px; } }
+
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--note);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background: var(--lime);
+  }
+  .eyebrow.dark { color: var(--steel); }
+  .eyebrow.dark::before { background: var(--ink); }
+
+  /* ============================================================
+     NAVIGATION
+     ============================================================ */
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(14, 14, 14, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+    z-index: 50;
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) { .nav-inner { padding: 18px 32px; } }
+
+  .logo {
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    color: var(--paper);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  .logo b {
+    background: var(--lime);
+    color: var(--ink);
+    padding: 1px 6px;
+    margin-left: 1px;
+  }
+
+  .nav-links {
+    display: none;
+    gap: 32px;
+    align-items: center;
+  }
+  @media (min-width: 900px) { .nav-links { display: flex; } }
+  .nav-links a {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--paper);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--lime); }
+
+  .nav-cta {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .nav-cta .btn-quote {
+    display: none;
+    background: var(--lime);
+    color: var(--ink);
+    padding: 10px 16px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1.5px solid var(--lime);
+    transition: all 0.2s;
+  }
+  @media (min-width: 600px) { .nav-cta .btn-quote { display: inline-flex; } }
+  .nav-cta .btn-quote:hover { background: transparent; color: var(--lime); }
+
+  .menu-icon {
+    width: 28px;
+    display: grid;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px 0;
+  }
+  @media (min-width: 900px) { .menu-icon { display: none; } }
+  .menu-icon span {
+    display: block;
+    height: 2px;
+    background: var(--paper);
+  }
+
+  /* ============================================================
+     HERO
+     ============================================================ */
+  .hero {
+    position: relative;
+    padding: 140px 0 80px;
+    overflow: hidden;
+  }
+  @media (min-width: 768px) { .hero { padding: 180px 0 120px; } }
+  @media (min-width: 1100px) { .hero { padding: 200px 0 140px; } }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--rule) 1px, transparent 1px),
+      linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+    background-size: 80px 80px;
+    background-position: -1px -1px;
+    opacity: 0.4;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse 70% 70% at 50% 30%, black 30%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 30%, black 30%, transparent 80%);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    position: relative;
+    z-index: 2;
+  }
+  @media (min-width: 1100px) {
+    .hero-grid {
+      grid-template-columns: 1.15fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .hero-stamp {
+    border: 1px solid var(--rule);
+    padding: 6px 10px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--note);
+  }
+  .hero-stamp .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--lime);
+    margin-right: 6px;
+    vertical-align: 1px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .hero h1 {
+    font-size: clamp(40px, 8vw, 96px);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    margin-bottom: 24px;
+  }
+  .hero h1 .hl {
+    background: var(--lime);
+    color: var(--ink);
+    padding: 0 8px;
+    display: inline-block;
+    transform: skew(-2deg);
+  }
+  .hero h1 .line { display: block; }
+
+  .hero-sub {
+    font-size: clamp(15px, 2vw, 19px);
+    color: #B8B8B8;
+    max-width: 540px;
+    margin-bottom: 36px;
+    line-height: 1.55;
+  }
+  .hero-sub strong { color: var(--paper); font-weight: 600; }
+
+  .cta-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 24px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1.5px solid;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    background: transparent;
+  }
+  .btn-primary {
+    background: var(--lime);
+    color: var(--ink);
+    border-color: var(--lime);
+  }
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--lime);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--paper);
+    border-color: var(--paper);
+  }
+  .btn-ghost:hover {
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .btn-dark {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+  .btn-dark:hover {
+    background: transparent;
+    color: var(--ink);
+  }
+  .btn .arrow { transition: transform 0.18s; }
+  .btn:hover .arrow { transform: translateX(4px); }
+
+  /* Hero stats */
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero-stats > div {
+    padding: 20px 16px;
+    border-right: 1px solid var(--rule);
+  }
+  .hero-stats > div:last-child { border-right: none; }
+  .hero-stats .label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--note);
+    margin-bottom: 6px;
+  }
+  .hero-stats .val {
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+  }
+  .hero-stats .val .lime { color: var(--lime); }
+
+  /* Hero visual panel */
+  .hero-visual {
+    position: relative;
+    aspect-ratio: 4/5;
+    background: linear-gradient(135deg, #1A1A1A 0%, #0E0E0E 100%);
+    border: 1px solid var(--rule);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-visual::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(135deg, transparent 0 14px, rgba(198, 255, 0, 0.04) 14px 15px);
+  }
+  .hv-spec {
+    position: absolute;
+    top: 16px; left: 16px; right: 16px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--note);
+  }
+  .hv-spec .lime { color: var(--lime); }
+  .hv-bracket-tl, .hv-bracket-tr, .hv-bracket-bl, .hv-bracket-br {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-color: var(--lime);
+    border-style: solid;
+    border-width: 0;
+  }
+  .hv-bracket-tl { top: 40px; left: 40px; border-top-width: 2px; border-left-width: 2px; }
+  .hv-bracket-tr { top: 40px; right: 40px; border-top-width: 2px; border-right-width: 2px; }
+  .hv-bracket-bl { bottom: 40px; left: 40px; border-bottom-width: 2px; border-left-width: 2px; }
+  .hv-bracket-br { bottom: 40px; right: 40px; border-bottom-width: 2px; border-right-width: 2px; }
+
+  .hv-core {
+    width: 60%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #4a4a4a 0%, #1a1a1a 60%, #0a0a0a 100%);
+    box-shadow: inset 0 0 60px rgba(0,0,0,0.6), 0 20px 60px rgba(0,0,0,0.5);
+    position: relative;
+  }
+  .hv-core::before {
+    content: "";
+    position: absolute;
+    inset: 14%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 40%, #2a2a2a 0%, #0a0a0a 100%);
+    box-shadow: inset 0 0 40px rgba(0,0,0,0.8);
+  }
+  .hv-core::after {
+    content: "";
+    position: absolute;
+    inset: 30%;
+    border-radius: 50%;
+    background: var(--ink);
+    border: 1px solid var(--rule);
+  }
+  .hv-label {
+    position: absolute;
+    width: 78%;
+    height: 14%;
+    background: var(--lime);
+    color: var(--ink);
+    border: 1.5px solid var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+    font-size: clamp(10px, 1.6vw, 14px);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    z-index: 2;
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .hv-base {
+    position: absolute;
+    bottom: 16px; left: 16px; right: 16px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--note);
+  }
+
+  /* ============================================================
+     MARQUEE / TICKER
+     ============================================================ */
+  .ticker {
+    background: var(--lime);
+    color: var(--ink);
+    border-top: 1.5px solid var(--ink);
+    border-bottom: 1.5px solid var(--ink);
+    overflow: hidden;
+    padding: 14px 0;
+  }
+  .ticker-inner {
+    display: flex;
+    gap: 48px;
+    animation: scroll 40s linear infinite;
+    white-space: nowrap;
+    width: max-content;
+  }
+  .ticker span {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .ticker span::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: var(--ink);
+    border-radius: 50%;
+    margin-left: 32px;
+  }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ============================================================
+     SECTION GENERIC
+     ============================================================ */
+  .section { padding: 80px 0; }
+  @media (min-width: 768px) { .section { padding: 120px 0; } }
+
+  .section-head {
+    margin-bottom: 56px;
+    max-width: 720px;
+  }
+  .section-head .eyebrow { margin-bottom: 20px; }
+  .section-head h2 {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 900;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+  .section-head p {
+    font-size: clamp(15px, 1.5vw, 18px);
+    color: #B8B8B8;
+    max-width: 560px;
+    line-height: 1.55;
+  }
+
+  .section.bone {
+    background: var(--bone);
+    color: var(--ink);
+  }
+  .section.bone .section-head p { color: var(--steel); }
+  .section.bone h2 { color: var(--ink); }
+
+  /* ============================================================
+     PRODUCTS
+     ============================================================ */
+  .products {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media (min-width: 768px) {
+    .products {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border: 1px solid var(--ink);
+    }
+  }
+
+  .pcard {
+    background: var(--paper);
+    color: var(--ink);
+    padding: 32px 28px;
+    border: 1px solid var(--ink);
+    position: relative;
+    transition: background 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: 768px) {
+    .pcard {
+      border: none;
+      border-right: 1px solid var(--ink);
+    }
+    .pcard:last-child { border-right: none; }
+  }
+  .pcard:hover { background: var(--lime); }
+
+  .pcard-num {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--note);
+    margin-bottom: 24px;
+  }
+  .pcard-visual {
+    aspect-ratio: 4/3;
+    background: var(--ink);
+    margin-bottom: 28px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pcard-visual svg { width: 70%; height: 70%; }
+
+  .pcard h3 {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin-bottom: 12px;
+  }
+  .pcard p {
+    font-size: 14px;
+    color: var(--steel);
+    margin-bottom: 24px;
+    line-height: 1.55;
+    flex: 1;
+  }
+  .pcard:hover p { color: var(--ink); }
+
+  .pcard-spec {
+    border-top: 1px solid var(--ink);
+    padding-top: 16px;
+    display: grid;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .pcard-spec-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .pcard-spec-row .k { color: var(--note); }
+  .pcard:hover .pcard-spec-row .k { color: var(--steel); }
+  .pcard-spec-row .v { font-weight: 700; }
+
+  .pcard-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--ink);
+    padding-top: 16px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  /* ============================================================
+     WHY US
+     ============================================================ */
+  .why {
+    position: relative;
+    overflow: hidden;
+  }
+  .why::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--rule) 1px, transparent 1px),
+      linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+    background-size: 120px 120px;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  .why-inner { position: relative; z-index: 2; }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: end;
+  }
+  @media (min-width: 1000px) {
+    .why-grid {
+      grid-template-columns: 1.2fr 1fr;
+      gap: 80px;
+    }
+  }
+
+  .why h2 {
+    font-size: clamp(40px, 7vw, 88px);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    margin-bottom: 24px;
+  }
+  .why h2 .l1 { display: block; }
+  .why h2 .l2 { display: block; color: var(--lime); }
+  .why h2 .l3 { display: block; }
+
+  .why-sub {
+    font-size: 17px;
+    color: #B8B8B8;
+    max-width: 480px;
+    line-height: 1.55;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid var(--rule);
+  }
+  .stat-cell {
+    padding: 28px 20px;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .stat-cell:nth-child(2n) { border-right: none; }
+  .stat-cell:nth-last-child(-n+2) { border-bottom: none; }
+  .stat-cell .lbl {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--note);
+    margin-bottom: 8px;
+  }
+  .stat-cell .num {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-cell .num.lime { color: var(--lime); }
+  .stat-cell .desc {
+    font-size: 12px;
+    color: #B8B8B8;
+  }
+
+  /* ============================================================
+     MATERIALS
+     ============================================================ */
+  .materials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  @media (min-width: 600px) { .materials-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 900px) { .materials-grid { grid-template-columns: repeat(4, 1fr); } }
+
+  .matcard {
+    border: 1px solid var(--ink);
+    padding: 20px;
+    background: var(--paper);
+    transition: all 0.2s;
+    cursor: default;
+  }
+  .matcard:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .matcard-swatch {
+    aspect-ratio: 3/2;
+    margin-bottom: 16px;
+    border: 1px solid var(--ink);
+    position: relative;
+    overflow: hidden;
+  }
+  .matcard:hover .matcard-swatch { border-color: var(--paper); }
+
+  .swatch-coated { background: linear-gradient(135deg, #fafafa 0%, #e5e5e5 100%); }
+  .swatch-synthetic { background: linear-gradient(135deg, #ffffff 0%, #d4d4d4 100%); }
+  .swatch-bopp {
+    background: repeating-linear-gradient(45deg, rgba(0,0,0,0.04) 0 2px, transparent 2px 6px), #f8f8f8;
+  }
+  .swatch-pearl {
+    background: linear-gradient(135deg, #e8e4d8 0%, #f5f1e3 50%, #d4cfb8 100%);
+  }
+  .swatch-silver {
+    background: linear-gradient(135deg, #c8c8c8 0%, #f0f0f0 50%, #a8a8a8 100%);
+  }
+  .swatch-kraft { background: linear-gradient(135deg, #b8956a 0%, #8a6f4a 100%); }
+  .swatch-luxury {
+    background: linear-gradient(135deg, #f5f1e3 0%, #e8e0c8 100%);
+    background-image: radial-gradient(circle at 30% 30%, rgba(0,0,0,0.06) 1px, transparent 2px);
+    background-size: 8px 8px;
+  }
+  .swatch-petg { background: linear-gradient(135deg, #e8f0ff 0%, #c8d8e8 100%); opacity: 0.6; }
+  .swatch-pvc { background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%); }
+  .swatch-shrink { background: #ffffff; border-color: var(--ink); }
+  .swatch-wbopp { background: var(--paper); }
+  .swatch-cbopp { background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.1) 100%), var(--mute); }
+  .swatch-pe { background: linear-gradient(135deg, #f5f5f0 0%, #e0e0d8 100%); }
+
+  .matcard-name {
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .matcard-meta {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--note);
+  }
+  .matcard:hover .matcard-meta { color: #aaa; }
+
+  .matgroup {
+    margin-bottom: 56px;
+  }
+  .matgroup:last-child { margin-bottom: 0; }
+  .matgroup-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--ink);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .matgroup-head h3 {
+    font-size: clamp(20px, 2.5vw, 26px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+  }
+  .matgroup-head .moq {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--steel);
+  }
+  .matgroup-head .moq b { color: var(--ink); }
+
+  /* ============================================================
+     INDUSTRIES
+     ============================================================ */
+  .industries-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .indtag {
+    border: 1px solid var(--paper);
+    padding: 12px 18px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.18s;
+    cursor: default;
+  }
+  .indtag:hover {
+    background: var(--lime);
+    border-color: var(--lime);
+    color: var(--ink);
+  }
+
+  /* ============================================================
+     PROCESS
+     ============================================================ */
+  .process {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-top: 1px solid var(--ink);
+  }
+  @media (min-width: 900px) {
+    .process {
+      grid-template-columns: repeat(4, 1fr);
+      border-left: 1px solid var(--ink);
+    }
+  }
+
+  .pstep {
+    padding: 32px 28px;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+  @media (min-width: 900px) {
+    .pstep {
+      border-right: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+  }
+
+  .pstep-num {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--note);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .pstep-num::before {
+    content: "";
+    width: 32px;
+    height: 1px;
+    background: var(--ink);
+  }
+  .pstep h4 {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+  .pstep p {
+    font-size: 13px;
+    color: var(--steel);
+    line-height: 1.55;
+  }
+
+  /* ============================================================
+     FINAL CTA
+     ============================================================ */
+  .final-cta {
+    background: var(--lime);
+    color: var(--ink);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+  }
+  @media (min-width: 768px) { .final-cta { padding: 120px 0; } }
+
+  .final-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(14,14,14,0.12) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14,14,14,0.12) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
+  }
+
+  .final-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 56px;
+    position: relative;
+    z-index: 2;
+  }
+  @media (min-width: 1000px) {
+    .final-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+  }
+
+  .final-cta h2 {
+    font-size: clamp(40px, 7vw, 80px);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    margin-bottom: 24px;
+  }
+  .final-cta .lead {
+    font-size: clamp(16px, 2vw, 19px);
+    line-height: 1.5;
+    margin-bottom: 32px;
+    max-width: 480px;
+  }
+
+  .final-channels {
+    border: 1.5px solid var(--ink);
+    background: var(--paper);
+  }
+  .channel {
+    padding: 24px 28px;
+    border-bottom: 1.5px solid var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: var(--ink);
+    transition: background 0.2s;
+    gap: 16px;
+  }
+  .channel:last-child { border-bottom: none; }
+  .channel:hover { background: var(--ink); color: var(--paper); }
+  .channel:hover .ch-arrow { transform: translateX(6px); }
+
+  .channel-l .ch-tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 6px;
+  }
+  .channel:hover .ch-tag { color: #B8B8B8; }
+  .channel-l h4 {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: -0.015em;
+  }
+  .channel-l p {
+    font-size: 13px;
+    color: var(--steel);
+    margin-top: 4px;
+  }
+  .channel:hover .channel-l p { color: #B8B8B8; }
+  .ch-arrow {
+    font-size: 24px;
+    transition: transform 0.2s;
+  }
+
+  /* Form */
+  .form-card {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 32px;
+    border: 1.5px solid var(--ink);
+  }
+  @media (min-width: 768px) { .form-card { padding: 40px; } }
+
+  .form-card .form-eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--lime);
+    margin-bottom: 16px;
+  }
+  .form-card h3 {
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+    line-height: 1.05;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  @media (min-width: 600px) { .form-row.two { grid-template-columns: 1fr 1fr; } }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-field label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--note);
+    margin-bottom: 6px;
+  }
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--rule);
+    color: var(--paper);
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    padding: 10px 0;
+    outline: none;
+    transition: border-color 0.18s;
+    width: 100%;
+  }
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    border-bottom-color: var(--lime);
+  }
+  .form-field select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1L6 6L11 1' stroke='%23C6FF00' stroke-width='1.5'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    padding-right: 24px;
+    color: var(--paper);
+  }
+  .form-field select option { background: var(--ink); color: var(--paper); }
+  .form-field textarea { resize: vertical; min-height: 80px; }
+
+  .form-submit {
+    margin-top: 20px;
+    width: 100%;
+    background: var(--lime);
+    color: var(--ink);
+    border: 1.5px solid var(--lime);
+    padding: 18px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.18s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  .form-submit:hover {
+    background: transparent;
+    color: var(--lime);
+  }
+
+  .form-disclaimer {
+    margin-top: 14px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--note);
+    text-transform: uppercase;
+  }
+
+  /* ============================================================
+     FOOTER
+     ============================================================ */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 64px 0 32px;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 32px;
+  }
+  @media (min-width: 768px) {
+    .footer-top { grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; }
+  }
+
+  .footer-brand .logo { font-size: 24px; margin-bottom: 16px; }
+  .footer-brand p {
+    font-size: 13px;
+    color: #B8B8B8;
+    line-height: 1.55;
+    max-width: 320px;
+  }
+
+  .footer-col h5 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--note);
+    margin-bottom: 16px;
+  }
+  .footer-col a {
+    display: block;
+    font-size: 13px;
+    color: var(--paper);
+    text-decoration: none;
+    padding: 6px 0;
+    transition: color 0.18s;
+  }
+  .footer-col a:hover { color: var(--lime); }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--note);
+  }
+
+  /* ============================================================
+     STICKY WHATSAPP
+     ============================================================ */
+  .sticky-wa {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--lime);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 40;
+    box-shadow: 4px 4px 0 var(--ink);
+    transition: transform 0.18s, box-shadow 0.18s;
+  }
+  .sticky-wa:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  .sticky-wa svg { width: 28px; height: 28px; }
+  @media (min-width: 768px) {
+    .sticky-wa { right: 24px; bottom: 24px; width: 64px; height: 64px; }
+  }
+
+  /* ============================================================
+     ANIMATIONS
+     ============================================================ */
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.8s ease forwards;
+    }
+    .fade-in.d1 { animation-delay: 0.1s; }
+    .fade-in.d2 { animation-delay: 0.2s; }
+    .fade-in.d3 { animation-delay: 0.3s; }
+    .fade-in.d4 { animation-delay: 0.4s; }
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo">LABEL<b>EX</b></a>
+    <div class="nav-links">
+      <a href="#products">Products</a>
+      <a href="#why">Capability</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#contact" class="btn-quote">Get Quote →</a>
+      <div class="menu-icon"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-meta fade-in d1">
+          <div class="hero-stamp"><span class="dot"></span>SA Label Manufacturer · Est. 2008</div>
+          <div class="hero-stamp">Gauteng → Nationwide</div>
+        </div>
+        <h1 class="fade-in d2">
+          <span class="line">Industrial labels.</span>
+          <span class="line"><span class="hl">Built to spec.</span></span>
+          <span class="line">Shipped fast.</span>
+        </h1>
+        <p class="hero-sub fade-in d3">
+          We manufacture <strong>adhesive stickers</strong>, <strong>heat shrink sleeves</strong> and <strong>hot-melt glue labels</strong> for South African brands. From 100 units to 1M+. From our facility in Gauteng to your line, anywhere in SA.
+        </p>
+        <div class="cta-row fade-in d3">
+          <a href="#contact" class="btn btn-primary">Request Quote <span class="arrow">→</span></a>
+          <a href="https://wa.me/27000000000?text=Hi%20Labelex%2C%20I%20found%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20label%20products." class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp Us <span class="arrow">→</span></a>
+        </div>
+        <div class="hero-stats fade-in d4">
+          <div>
+            <div class="label">In Production</div>
+            <div class="val"><span class="lime">18</span> yrs</div>
+          </div>
+          <div>
+            <div class="label">Lead Time</div>
+            <div class="val">5–10d</div>
+          </div>
+          <div>
+            <div class="label">Min Order</div>
+            <div class="val">100<span class="lime">+</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual fade-in d2">
+        <div class="hv-spec">
+          <span>LX-001 / ADHESIVE</span>
+          <span class="lime">● LIVE</span>
+        </div>
+        <div class="hv-bracket-tl"></div>
+        <div class="hv-bracket-tr"></div>
+        <div class="hv-bracket-bl"></div>
+        <div class="hv-bracket-br"></div>
+        <div class="hv-core">
+          <div class="hv-label" style="top:32%;left:11%;">
+            <span>LABELEX</span>
+            <span>● 100%</span>
+          </div>
+        </div>
+        <div class="hv-base">
+          <span>JHB · ZA</span>
+          <span>SCALE 1:1</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TICKER
+     ============================================================ -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span>FMCG</span><span>BEVERAGE</span><span>COSMETICS</span><span>PHARMA</span><span>FOOD</span><span>CHEMICAL</span><span>AGRI</span><span>WINE & SPIRITS</span><span>HOUSEHOLD</span>
+    <span>FMCG</span><span>BEVERAGE</span><span>COSMETICS</span><span>PHARMA</span><span>FOOD</span><span>CHEMICAL</span><span>AGRI</span><span>WINE & SPIRITS</span><span>HOUSEHOLD</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     PRODUCTS
+     ============================================================ -->
+<section class="section bone" id="products">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow dark">Products · 03 Categories</div>
+      <h2>What we manufacture.</h2>
+      <p>Three core label types. Quote any combination. Every order leaves our Gauteng facility quality-checked and dispatch-ready.</p>
+    </div>
+
+    <div class="products">
+      <div class="pcard">
+        <div class="pcard-num">01 / 03</div>
+        <div class="pcard-visual">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="25" width="60" height="50" rx="2" fill="none" stroke="#C6FF00" stroke-width="2"/>
+            <rect x="26" y="32" width="48" height="6" fill="#C6FF00"/>
+            <rect x="26" y="44" width="36" height="3" fill="#C6FF00" opacity="0.6"/>
+            <rect x="26" y="51" width="42" height="3" fill="#C6FF00" opacity="0.6"/>
+            <rect x="26" y="58" width="30" height="3" fill="#C6FF00" opacity="0.6"/>
+            <circle cx="74" cy="68" r="3" fill="#C6FF00"/>
+          </svg>
+        </div>
+        <h3>Adhesive Sticker Labels</h3>
+        <p>Pressure-sensitive labels on seven substrates. Most versatile. Best visual options. From short prototype runs to high-volume production.</p>
+        <div class="pcard-spec">
+          <div class="pcard-spec-row"><span class="k">MOQ</span><span class="v">100 — 1M+</span></div>
+          <div class="pcard-spec-row"><span class="k">Materials</span><span class="v">7 stocks</span></div>
+          <div class="pcard-spec-row"><span class="k">Best for</span><span class="v">Any container</span></div>
+        </div>
+        <a href="#contact" class="pcard-link"><span>Quote Adhesive</span><span>→</span></a>
+      </div>
+
+      <div class="pcard">
+        <div class="pcard-num">02 / 03</div>
+        <div class="pcard-visual">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 30 20 Q 30 18 32 18 L 68 18 Q 70 18 70 20 L 70 30 Q 75 35 75 50 Q 75 65 70 70 L 70 80 Q 70 82 68 82 L 32 82 Q 30 82 30 80 L 30 70 Q 25 65 25 50 Q 25 35 30 30 Z" fill="none" stroke="#C6FF00" stroke-width="2"/>
+            <rect x="32" y="40" width="36" height="20" fill="#C6FF00" opacity="0.3"/>
+            <rect x="36" y="46" width="28" height="3" fill="#C6FF00"/>
+            <rect x="36" y="52" width="20" height="2" fill="#C6FF00" opacity="0.7"/>
+          </svg>
+        </div>
+        <h3>Heat Shrink Sleeves</h3>
+        <p>360° full-body decoration. PETG, PVC and opaque white films. Wraps any container shape — square, round, contoured, tapered.</p>
+        <div class="pcard-spec">
+          <div class="pcard-spec-row"><span class="k">MOQ</span><span class="v">10K — 50K</span></div>
+          <div class="pcard-spec-row"><span class="k">Materials</span><span class="v">3 films</span></div>
+          <div class="pcard-spec-row"><span class="k">Best for</span><span class="v">Complex shapes</span></div>
+        </div>
+        <a href="#contact" class="pcard-link"><span>Quote Sleeves</span><span>→</span></a>
+      </div>
+
+      <div class="pcard">
+        <div class="pcard-num">03 / 03</div>
+        <div class="pcard-visual">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="50" cy="22" rx="22" ry="4" fill="none" stroke="#C6FF00" stroke-width="2"/>
+            <path d="M 28 22 L 28 80 Q 28 84 32 84 L 68 84 Q 72 84 72 80 L 72 22" fill="none" stroke="#C6FF00" stroke-width="2"/>
+            <rect x="28" y="40" width="44" height="28" fill="#C6FF00" opacity="0.25"/>
+            <rect x="34" y="46" width="32" height="3" fill="#C6FF00"/>
+            <rect x="34" y="54" width="24" height="2" fill="#C6FF00" opacity="0.7"/>
+            <rect x="34" y="60" width="28" height="2" fill="#C6FF00" opacity="0.7"/>
+          </svg>
+        </div>
+        <h3>Hot Melt Glue Labels</h3>
+        <p>High-speed roll-fed labelling for cylindrical containers. Lowest unit cost. Built for FMCG and beverage production lines at scale.</p>
+        <div class="pcard-spec">
+          <div class="pcard-spec-row"><span class="k">MOQ</span><span class="v">100K — 1M+</span></div>
+          <div class="pcard-spec-row"><span class="k">Materials</span><span class="v">3 films</span></div>
+          <div class="pcard-spec-row"><span class="k">Best for</span><span class="v">High volume</span></div>
+        </div>
+        <a href="#contact" class="pcard-link"><span>Quote Hot Melt</span><span>→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY US
+     ============================================================ -->
+<section class="why section" id="why">
+  <div class="wrap why-inner">
+    <div class="why-grid">
+      <div>
+        <div class="eyebrow" style="margin-bottom:24px;">Why Labelex</div>
+        <h2>
+          <span class="l1">18 years.</span>
+          <span class="l2">One factory.</span>
+          <span class="l3">Zero excuses.</span>
+        </h2>
+        <p class="why-sub">Vertically integrated production — from origination to dispatch. No middlemen. No surprise lead times. Real engineers, real machines, real accountability.</p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-cell">
+          <div class="lbl">Tonnes / yr</div>
+          <div class="num lime">4,200</div>
+          <div class="desc">Substrate processed</div>
+        </div>
+        <div class="stat-cell">
+          <div class="lbl">Lead time</div>
+          <div class="num">5–10d</div>
+          <div class="desc">Standard runs</div>
+        </div>
+        <div class="stat-cell">
+          <div class="lbl">Reorder rate</div>
+          <div class="num lime">87%</div>
+          <div class="desc">Repeat clients</div>
+        </div>
+        <div class="stat-cell">
+          <div class="lbl">Coverage</div>
+          <div class="num">9 / 9</div>
+          <div class="desc">SA provinces</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MATERIALS
+     ============================================================ -->
+<section class="section bone" id="materials">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow dark">Materials · 13 Stocks</div>
+      <h2>Substrate library.</h2>
+      <p>Every job specs a substrate. We hold the full range in-house. Pick from below or send your sample and we'll match it.</p>
+    </div>
+
+    <div class="matgroup">
+      <div class="matgroup-head">
+        <h3>Adhesive Sticker Labels</h3>
+        <div class="moq">MOQ <b>100 — 1M+</b></div>
+      </div>
+      <div class="materials-grid">
+        <div class="matcard">
+          <div class="matcard-swatch swatch-coated"></div>
+          <div class="matcard-name">Coated Paper</div>
+          <div class="matcard-meta">PAPER · MATTE/GLOSS</div>
+        </div>
+        <div class="matcard">
+          <div class="matcard-swatch swatch-synthetic"></div>
+          <div class="matcard-name">Synthetic Paper</div>
+          <div class="matcard-meta">PP · WATERPROOF</div>
+        </div>
+        <div class="matcard">
+          <div class="matcard-swatch swatch-bopp"></div>
+          <div class="matcard-name">Transparent BOPP</div>
+          <div class="matcard-meta">CLEAR · NO-LABEL LOOK</div>
+        </div>
+        <div class="matcard">
+          <div class="matcard-swatch swatch-pearl"></div>
+          <div class="matcard-name">Pearlescent Film</div>
+          <div class="matcard-meta">METALLIC · PREMIUM</div>
+        </div>
+        <div class="matcard">
+          <div class="matcard-swatch swatch-silver"></div>
+          <div class="matcard-name">Bright Silver Film</div>
+          <div class="matcard-meta">METALLISED · MIRROR</div>
+        </div>
+        <div class="matcard">
+          <div class="matcard-swatch swatch-kraft"></div>
+          <div class="matcard-name">Kraft Paper</div>
+          <div class="matcard-meta">NATURAL · ARTISAN</div>
+        </div>
+        <div class="matcard">
+          <div class="matcard-swatch swatch-luxury"></div>
+          <div class="matcard-name">Luxury Texture</div>
+          <div class="matcard-meta">EMBOSSED · TACTILE</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="matgroup">
+      <div class="matgroup-head">
+        <h3>Heat Shrink Sleeves</h3>
+        <div class="moq">MOQ <b>10K — 50K</b></div>
+      </div>
+      <div class="materials-grid">
+        <div class="matcard">
+          <div class="matcard-swatch swatch-petg"></div>
+          <div class="matcard-name">PETG</div>
+          <div class="matcard-meta">CLEAR · HIGH SHRINK</div>
+        </div>
+        <div class="matcard">
+          <div class="matcard-swatch swatch-pvc"></div>
+          <div class="matcard-name">PVC</div>
+          <div class="matcard-meta">STANDARD · ECONOMICAL</div>
+        </div>
+        <div class="matcard">
+          <div class="matcard-swatch swatch-shrink"></div>
+          <div class="matcard-name">Opaque White Shrink</div>
+          <div class="matcard-meta">FULL COVER · BARRIER</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="matgroup">
+      <div class="matgroup-head">
+        <h3>Hot Melt Glue Labels</h3>
+        <div class="moq">MOQ <b>100K — 1M+</b></div>
+      </div>
+      <div class="materials-grid">
+        <div class="matcard">
+          <div class="matcard-swatch swatch-wbopp"></div>
+          <div class="matcard-name">White BOPP</div>
+          <div class="matcard-meta">OPAQUE · DURABLE</div>
+        </div>
+        <div class="matcard">
+          <div class="matcard-swatch swatch-cbopp"></div>
+          <div class="matcard-name">Clear BOPP</div>
+          <div class="matcard-meta">TRANSPARENT · GLOSS</div>
+        </div>
+        <div class="matcard">
+          <div class="matcard-swatch swatch-pe"></div>
+          <div class="matcard-name">PE Film</div>
+          <div class="matcard-meta">FLEXIBLE · SQUEEZE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     INDUSTRIES
+     ============================================================ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Industries · Served</div>
+      <h2>Who we manufacture for.</h2>
+      <p>South African brands across regulated and consumer verticals. Spec-driven, compliance-aware, deadline-disciplined.</p>
+    </div>
+    <div class="industries-row">
+      <div class="indtag">FMCG</div>
+      <div class="indtag">Beverage</div>
+      <div class="indtag">Wine & Spirits</div>
+      <div class="indtag">Cosmetics</div>
+      <div class="indtag">Personal Care</div>
+      <div class="indtag">Pharmaceutical</div>
+      <div class="indtag">Nutraceutical</div>
+      <div class="indtag">Food</div>
+      <div class="indtag">Dairy</div>
+      <div class="indtag">Household Chemical</div>
+      <div class="indtag">Agricultural</div>
+      <div class="indtag">Industrial</div>
+      <div class="indtag">Logistics</div>
+      <div class="indtag">Private Label</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROCESS
+     ============================================================ -->
+<section class="section bone" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow dark">Process · 04 Steps</div>
+      <h2>From brief to dispatch.</h2>
+      <p>Tight loop. Real timelines. You'll know exactly where your job is, every step.</p>
+    </div>
+
+    <div class="process">
+      <div class="pstep">
+        <div class="pstep-num">01 · BRIEF</div>
+        <h4>Send the spec.</h4>
+        <p>Form, WhatsApp or factory visit. Share artwork, quantities, container shape, deadline. Quote inside 24 hours.</p>
+      </div>
+      <div class="pstep">
+        <div class="pstep-num">02 · PROOF</div>
+        <h4>Approve the proof.</h4>
+        <p>Digital proof for sign-off. Material sample on request. Nothing prints until you say so — no surprises.</p>
+      </div>
+      <div class="pstep">
+        <div class="pstep-num">03 · PRODUCE</div>
+        <h4>We manufacture.</h4>
+        <p>Your job runs in our Gauteng facility. Quality-checked at three stages. Standard runs ship in 5–10 working days.</p>
+      </div>
+      <div class="pstep">
+        <div class="pstep-num">04 · DISPATCH</div>
+        <h4>Out the door.</h4>
+        <p>Nationwide courier. All nine provinces. Tracking link sent on dispatch. Reorder in one click next time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FINAL CTA
+     ============================================================ -->
+<section class="final-cta" id="contact">
+  <div class="wrap">
+    <div class="final-grid">
+      <div>
+        <div class="eyebrow dark" style="margin-bottom:24px;">Get a quote · 24h turnaround</div>
+        <h2>Send us<br/>the brief.</h2>
+        <p class="lead">Three ways to reach us. Pick the fastest path for your project. Real human reply, every time — Mon–Fri 07:00–17:00.</p>
+
+        <div class="final-channels">
+          <a href="https://wa.me/27000000000?text=Hi%20Labelex%2C%20I%20found%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20label%20products." class="channel" target="_blank" rel="noopener">
+            <div class="channel-l">
+              <div class="ch-tag">Fastest · Reply in hours</div>
+              <h4>WhatsApp</h4>
+              <p>+27 [PENDING] · Send sketches, samples, photos</p>
+            </div>
+            <div class="ch-arrow">→</div>
+          </a>
+          <a href="mailto:hello@labelex.co.za" class="channel">
+            <div class="channel-l">
+              <div class="ch-tag">Formal · 24h reply</div>
+              <h4>Email</h4>
+              <p>[PENDING]@labelex.co.za</p>
+            </div>
+            <div class="ch-arrow">→</div>
+          </a>
+          <a href="#" class="channel">
+            <div class="channel-l">
+              <div class="ch-tag">In-Person · By appointment</div>
+              <h4>Factory Visit</h4>
+              <p>Gauteng · Bring samples, leave with proof</p>
+            </div>
+            <div class="ch-arrow">→</div>
+          </a>
+        </div>
+      </div>
+
+      <form class="form-card" action="https://formspree.io/f/PENDING" method="POST">
+        <div class="form-eyebrow">// QUOTE FORM</div>
+        <h3>Tell us what you need.</h3>
+
+        <div class="form-row two">
+          <div class="form-field">
+            <label for="fname">First Name</label>
+            <input type="text" name="first_name" id="fname" required>
+          </div>
+          <div class="form-field">
+            <label for="lname">Last Name</label>
+            <input type="text" name="last_name" id="lname" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="company">Company</label>
+            <input type="text" name="company" id="company" required>
+          </div>
+        </div>
+
+        <div class="form-row two">
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+          </div>
+          <div class="form-field">
+            <label for="whatsapp">WhatsApp Number</label>
+            <input type="tel" name="whatsapp" id="whatsapp" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="product">Product Interest</label>
+            <select name="product_interest" id="product" required>
+              <option value="">Select a category</option>
+              <option value="adhesive">Adhesive Sticker Labels</option>
+              <option value="shrink">Heat Shrink Sleeves</option>
+              <option value="hotmelt">Hot Melt Glue Labels</option>
+              <option value="multiple">Multiple / Not sure</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="message">Message · Quantities, deadline, artwork notes</label>
+            <textarea name="message" id="message" rows="4" required></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="form-submit">Send Brief <span>→</span></button>
+        <div class="form-disclaimer">// Submissions reach Mr Allana directly. No spam.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">LABEL<b>EX</b></div>
+        <p>South African label manufacturer. Adhesive stickers, heat shrink sleeves, hot-melt glue labels. Built in Gauteng. Shipped nationwide.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <a href="#products">Adhesive Stickers</a>
+        <a href="#products">Heat Shrink Sleeves</a>
+        <a href="#products">Hot Melt Labels</a>
+        <a href="#materials">Materials</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#why">Capability</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact">Factory Visit</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="https://wa.me/27000000000" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:hello@labelex.co.za">Email</a>
+        <a href="#contact">Quote Form</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Labelex · Industrial Label Manufacturer · Gauteng SA</div>
+      <div>Built for procurement.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     STICKY WHATSAPP
+     ============================================================ -->
+<a href="https://wa.me/27000000000?text=Hi%20Labelex%2C%20I%20found%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20label%20products." class="sticky-wa" target="_blank" rel="noopener" aria-label="Chat with Labelex on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+</body>
+</html>
