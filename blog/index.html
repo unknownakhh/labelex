@@ -181,6 +181,12 @@ html, body { max-width: 100%; overflow-x: hidden; }
     linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
   background-size: 60px 60px;
 }
+.fp-visual img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
 .fp-visual-label {
   position: relative; z-index: 1;
   font-family: 'Barlow Condensed', sans-serif;
@@ -496,7 +502,7 @@ html, body { max-width: 100%; overflow-x: hidden; }
                onclick="location.href='../blog/self-adhesive-labels-guide/'">
         <div class="fp-visual">
           <div class="fp-badge">Featured</div>
-          <div class="fp-visual-label">SAL</div>
+          <img src="../img/blog/index/BlogIndexThumbnail.png" alt="Self adhesive label rolls in multiple substrates — manufactured by Labelex in Gauteng, South Africa" loading="lazy" />
         </div>
         <div class="fp-content">
           <div class="fp-meta-top">
