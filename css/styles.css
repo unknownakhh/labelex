@@ -293,7 +293,7 @@ body {
 
 .hero-visual {
   position: relative;
-  aspect-ratio: 4/5;
+  aspect-ratio: 3/2;
   background: var(--paper-2);
   border: 1px solid var(--rule);
   overflow: hidden;
@@ -305,6 +305,13 @@ body {
   content: "";
   position: absolute; inset: 0;
   background-image: repeating-linear-gradient(135deg, transparent 0 14px, rgba(11,42,91,0.03) 14px 15px);
+}
+.hero-visual img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
 }
 .hv-spec {
   position: absolute; top: 16px; left: 16px; right: 16px;
