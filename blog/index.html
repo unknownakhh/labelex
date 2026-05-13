@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Label Manufacturing Insights & Industry Guides | Labelex Blog</title>
+<meta name="description" content="Label manufacturing guides, material comparisons and industry insights from Labelex. Know your options before you order. South African label manufacturer." />
+<link rel="canonical" href="https://labelex.co.za/blog/" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="icon" type="image/png" href="../img/favicon.png" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Labelex Blog",
+  "description": "Label manufacturing guides, material comparisons and industry insights from Labelex — South Africa's label manufacturer.",
+  "url": "https://labelex.co.za/blog/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Labelex",
+    "url": "https://labelex.co.za"
+  }
+}
+</script>
+
+<style>
+html, body { max-width: 100%; overflow-x: hidden; }
+
+/* ── MOBILE MENU ─────────────────────────────── */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 60px; left: 0; right: 0; bottom: 0;
+  background: var(--ink);
+  z-index: 49;
+  flex-direction: column;
+  padding: 32px 24px;
+  gap: 0;
+  overflow-y: auto;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: color 0.2s;
+}
+.mobile-menu a:hover { color: #fff; }
+.mobile-menu .mobile-menu-cta {
+  background: var(--lime); color: #fff;
+  text-align: center; padding: 16px 24px;
+  margin-top: 28px; border-bottom: none;
+  font-weight: 700; border-radius: 999px;
+}
+.mobile-menu .mobile-menu-cta:hover { background: var(--lime-deep); color: #fff; }
+.menu-icon.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-icon.active span:nth-child(2) { opacity: 0; }
+.menu-icon.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.menu-icon span { transition: transform 0.25s ease, opacity 0.25s ease; }
+
+/* ── BLOG HERO ───────────────────────────────── */
+.blog-hero {
+  background: var(--ink);
+  padding: 120px 0 64px;
+  position: relative; overflow: hidden;
+}
+@media (min-width: 768px) { .blog-hero { padding: 150px 0 80px; } }
+.blog-hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+}
+.blog-hero-inner { position: relative; z-index: 2; }
+
+.blog-hero .crumb {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 28px;
+  display: flex; gap: 12px; align-items: center;
+}
+.blog-hero .crumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.18s; }
+.blog-hero .crumb a:hover { color: #fff; }
+.blog-hero .crumb .sep { opacity: 0.3; }
+.blog-hero .crumb .current { color: rgba(255,255,255,0.8); font-weight: 700; }
+
+.blog-hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(40px, 7vw, 80px);
+  font-weight: 800; line-height: 0.97;
+  letter-spacing: -0.02em; color: #fff;
+  margin-bottom: 20px;
+}
+.blog-hero h1 .hl {
+  background: var(--lime); color: #fff;
+  padding: 0 10px; display: inline-block;
+}
+.blog-hero p {
+  font-size: clamp(14px, 1.6vw, 17px);
+  color: rgba(255,255,255,0.65);
+  max-width: 560px; line-height: 1.6;
+}
+
+/* ── FILTER STRIP ────────────────────────────── */
+.filter-strip {
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--rule);
+  position: sticky; top: 60px; z-index: 40;
+}
+.filter-strip-inner {
+  display: flex; gap: 4px;
+  overflow-x: auto; scrollbar-width: none;
+  padding: 12px 20px;
+}
+@media (min-width: 768px) { .filter-strip-inner { padding: 12px 32px; } }
+.filter-strip-inner::-webkit-scrollbar { display: none; }
+
+.ftag {
+  flex-shrink: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 8px 16px;
+  border: 1px solid var(--rule);
+  background: var(--paper); color: var(--ink-3);
+  border-radius: 999px; cursor: pointer;
+  transition: all 0.18s; white-space: nowrap;
+}
+.ftag:hover { color: var(--ink); border-color: var(--ink-3); }
+.ftag.active { background: var(--lime); border-color: var(--lime); color: #fff; }
+
+/* ── BLOG LAYOUT ─────────────────────────────── */
+.blog-layout {
+  max-width: 1320px; margin: 0 auto;
+  padding: 56px 20px 80px;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 56px;
+  align-items: start;
+}
+@media (min-width: 768px) { .blog-layout { padding: 56px 32px 80px; } }
+@media (max-width: 960px) { .blog-layout { grid-template-columns: 1fr; } }
+
+/* ── FEATURED POST ───────────────────────────── */
+.featured-post {
+  border: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  margin-bottom: 1px; /* merges visually with grid border */
+  cursor: pointer;
+  transition: border-color 0.18s;
+  background: var(--paper);
+}
+.featured-post:hover { border-color: var(--ink-2); }
+@media (max-width: 680px) { .featured-post { grid-template-columns: 1fr; } }
+
+.fp-visual {
+  background: var(--ink);
+  min-height: 240px;
+  position: relative; overflow: hidden;
+  display: flex; align-items: flex-end; padding: 24px;
+}
+.fp-visual::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.fp-visual-label {
+  position: relative; z-index: 1;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 80px; font-weight: 800;
+  line-height: 1; letter-spacing: -0.03em;
+  color: rgba(237,107,31,0.15);
+  text-transform: uppercase;
+  user-select: none; pointer-events: none;
+}
+.fp-badge {
+  position: absolute; top: 20px; left: 20px; z-index: 2;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  background: var(--lime); color: #fff;
+  padding: 5px 12px; border-radius: 999px;
+}
+
+.fp-content {
+  padding: 32px 28px;
+  display: flex; flex-direction: column;
+  justify-content: space-between; gap: 18px;
+}
+.fp-meta-top { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+
+.post-cat {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; font-weight: 700;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--lime); border: 1px solid var(--lime);
+  padding: 4px 10px; border-radius: 999px;
+}
+.post-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.fp-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 800; line-height: 1.05;
+  letter-spacing: -0.015em; color: var(--ink);
+  transition: color 0.18s;
+}
+.featured-post:hover .fp-title { color: var(--ink-2); }
+
+.fp-excerpt { font-size: 14px; color: var(--ink-3); line-height: 1.65; }
+
+.fp-footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 16px; border-top: 1px solid var(--rule);
+}
+.fp-readtime {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--ink-3);
+}
+.arrow-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--lime); display: flex; align-items: center; gap: 8px;
+  text-decoration: none; transition: gap 0.18s;
+}
+.featured-post:hover .arrow-link { gap: 12px; }
+
+/* ── POST GRID ───────────────────────────────── */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin-bottom: 40px;
+}
+@media (max-width: 560px) { .post-grid { grid-template-columns: 1fr; } }
+
+.post-card {
+  background: var(--paper);
+  cursor: pointer;
+  transition: background 0.18s;
+  display: flex; flex-direction: column;
+}
+.post-card:hover { background: var(--paper-2); }
+
+.pc-img {
+  height: 128px;
+  background: var(--ink);
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.pc-img::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.pc-img-word {
+  position: relative; z-index: 1;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 44px; font-weight: 800;
+  color: rgba(237,107,31,0.2);
+  text-transform: uppercase; letter-spacing: -0.02em;
+  user-select: none;
+}
+
+.pc-body {
+  padding: 20px;
+  display: flex; flex-direction: column;
+  gap: 10px; flex: 1;
+}
+.pc-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 19px; font-weight: 800;
+  line-height: 1.1; letter-spacing: -0.01em; color: var(--ink);
+  transition: color 0.18s;
+}
+.post-card:hover .pc-title { color: var(--ink-2); }
+.pc-excerpt { font-size: 13px; color: var(--ink-3); line-height: 1.6; }
+.pc-footer {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: auto; padding-top: 12px; border-top: 1px solid var(--rule);
+}
+.pc-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3);
+}
+
+/* ── PAGINATION ──────────────────────────────── */
+.blog-pagination {
+  display: flex; gap: 6px; align-items: center;
+  padding-top: 32px; border-top: 1px solid var(--rule);
+}
+.pg-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+  min-width: 36px; height: 36px;
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0 12px; border: 1px solid var(--rule);
+  border-radius: 999px; background: var(--paper); color: var(--ink-3);
+  cursor: pointer; transition: all 0.18s; text-decoration: none;
+}
+.pg-btn:hover { color: var(--ink); border-color: var(--ink-3); }
+.pg-btn.active { background: var(--lime); border-color: var(--lime); color: #fff; }
+.pg-dots { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--ink-3); padding: 0 4px; }
+
+/* ── SIDEBAR ─────────────────────────────────── */
+.blog-sidebar {
+  display: flex; flex-direction: column; gap: 24px;
+  position: sticky; top: 120px;
+}
+@media (max-width: 960px) { .blog-sidebar { position: static; } }
+
+.sw {
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  overflow: hidden;
+}
+.sw-head {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-3); padding: 14px 20px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-2);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.sw-body { padding: 20px; }
+
+/* CTA sidebar */
+.sw-cta { background: var(--ink); border-color: var(--ink); }
+.sw-cta .sw-head {
+  background: rgba(255,255,255,0.06);
+  border-bottom-color: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.5);
+}
+.sw-cta .sw-head .accent { color: var(--lime); }
+.sw-cta .sw-body {
+  background: transparent;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.sw-cta p { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.6; }
+.sw-btn-primary {
+  display: block; text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  padding: 13px 20px; background: var(--lime); color: #fff;
+  border-radius: 999px; text-decoration: none; transition: background 0.18s;
+}
+.sw-btn-primary:hover { background: var(--lime-deep); }
+.sw-btn-wa {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  padding: 12px 20px; color: #25d366;
+  border: 1px solid #25d366; border-radius: 999px;
+  text-decoration: none; transition: background 0.18s;
+}
+.sw-btn-wa:hover { background: rgba(37,211,102,0.08); }
+
+/* Popular */
+.pop-list { display: flex; flex-direction: column; }
+.pop-item {
+  display: flex; gap: 14px;
+  padding: 14px 0; border-bottom: 1px solid var(--rule);
+  cursor: pointer; text-decoration: none; transition: color 0.18s;
+}
+.pop-item:first-child { padding-top: 0; }
+.pop-item:last-child { border-bottom: none; padding-bottom: 0; }
+.pop-n {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px; font-weight: 800; color: var(--rule);
+  line-height: 1; flex-shrink: 0; padding-top: 2px; transition: color 0.18s;
+}
+.pop-item:hover .pop-n { color: var(--lime); }
+.pop-info { display: flex; flex-direction: column; gap: 4px; }
+.pop-t {
+  font-size: 13px; font-weight: 700;
+  color: var(--ink); line-height: 1.3;
+  letter-spacing: -0.005em; transition: color 0.18s;
+}
+.pop-item:hover .pop-t { color: var(--ink-2); }
+.pop-d {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--ink-3);
+}
+
+/* Topics */
+.topics-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
+.tpill {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 7px 14px; border: 1px solid var(--rule);
+  border-radius: 999px; color: var(--ink-3);
+  background: var(--paper); cursor: pointer; transition: all 0.18s;
+}
+.tpill:hover { color: var(--ink); border-color: var(--ink-3); }
+.tpill.active { background: var(--lime); border-color: var(--lime); color: #fff; }
+</style>
+</head>
+<body>
+
+<!-- ░░ NAV ░░ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo">LABEL<span class="ex">EX</span></a>
+    <div class="nav-links">
+      <a href="/products/">Products</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/blog/" class="active">Blog</a>
+    </div>
+    <div class="nav-cta">
+      <a href="/contact/" class="btn-quote">Get Quote →</a>
+      <div class="menu-icon" id="burgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/products/">Products</a>
+  <a href="/about/">About</a>
+  <a href="/contact/">Contact</a>
+  <a href="/blog/">Blog</a>
+  <a href="/contact/" class="mobile-menu-cta">Get Quote →</a>
+</div>
+
+<!-- ░░ BLOG HERO ░░ -->
+<section class="blog-hero">
+  <div class="wrap blog-hero-inner">
+    <div class="crumb">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <span class="current">Blog</span>
+    </div>
+    <h1>Label manufacturing<br/><span class="hl">knowledge base.</span></h1>
+    <p>Technical guides, material comparisons and production insights. Know your options before you order.</p>
+  </div>
+</section>
+
+<!-- ░░ FILTER STRIP ░░ -->
+<div class="filter-strip">
+  <div class="wrap filter-strip-inner">
+    <button class="ftag active" onclick="filterPosts('all',this)">All Posts</button>
+    <button class="ftag" onclick="filterPosts('buyer-guides',this)">Buyer Guides</button>
+    <button class="ftag" onclick="filterPosts('industry',this)">Industry</button>
+    <button class="ftag" onclick="filterPosts('materials',this)">Materials</button>
+    <button class="ftag" onclick="filterPosts('how-to',this)">How-To</button>
+    <button class="ftag" onclick="filterPosts('product-focus',this)">Product Focus</button>
+  </div>
+</div>
+
+<!-- ░░ MAIN ░░ -->
+<main>
+  <div class="blog-layout">
+
+    <!-- LEFT: posts -->
+    <div>
+
+      <!-- FEATURED — Post 1 (live) -->
+      <article class="featured-post fade-in d1" data-category="buyer-guides"
+               onclick="location.href='/blog/self-adhesive-labels-guide/'">
+        <div class="fp-visual">
+          <div class="fp-badge">Featured</div>
+          <div class="fp-visual-label">SAL</div>
+        </div>
+        <div class="fp-content">
+          <div class="fp-meta-top">
+            <span class="post-cat">Buyer Guide</span>
+            <span class="post-date">7 Jun 2025</span>
+          </div>
+          <h2 class="fp-title">What Are Self Adhesive Labels? The Complete Guide for SA Businesses</h2>
+          <p class="fp-excerpt">Seven substrates, five key decision factors and real-world scenarios. Everything procurement managers need to know before specifying a label order.</p>
+          <div class="fp-footer">
+            <span class="fp-readtime">6 min read</span>
+            <span class="arrow-link">Read Article →</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- GRID — Posts 2 to 11 (coming soon) -->
+      <div class="post-grid fade-in d2" id="postGrid">
+
+        <article class="post-card" data-category="industry"
+                 onclick="location.href='/blog/cosmetic-label-manufacturing/'">
+          <div class="pc-img"><div class="pc-img-word">CMT</div></div>
+          <div class="pc-body">
+            <span class="post-cat">Industry</span>
+            <h2 class="pc-title">Cosmetic Label Manufacturing in South Africa</h2>
+            <p class="pc-excerpt">Materials, finishes and compliance requirements for cosmetic and personal care product labels manufactured in South Africa.</p>
+            <div class="pc-footer">
+              <span class="pc-meta">Coming Soon</span>
+              <span class="arrow-link" style="font-size:9px;">Read →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="industry"
+                 onclick="location.href='/blog/bottle-label-printing/'">
+          <div class="pc-img"><div class="pc-img-word">BTL</div></div>
+          <div class="pc-body">
+            <span class="post-cat">Industry</span>
+            <h2 class="pc-title">Bottle Label Printing: What Every Beverage Brand Needs to Know</h2>
+            <p class="pc-excerpt">Format selection, material specifications and production volumes for beverage bottle labels in South Africa.</p>
+            <div class="pc-footer">
+              <span class="pc-meta">Coming Soon</span>
+              <span class="arrow-link" style="font-size:9px;">Read →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="buyer-guides"
+                 onclick="location.href='/blog/how-to-choose-the-right-label-material/'">
+          <div class="pc-img"><div class="pc-img-word">MAT</div></div>
+          <div class="pc-body">
+            <span class="post-cat">Buyer Guide</span>
+            <h2 class="pc-title">How to Choose the Right Label Material for Your Product</h2>
+            <p class="pc-excerpt">A practical decision framework for procurement managers selecting between paper, film and foil label substrates.</p>
+            <div class="pc-footer">
+              <span class="pc-meta">Coming Soon</span>
+              <span class="arrow-link" style="font-size:9px;">Read →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="how-to"
+                 onclick="location.href='/blog/custom-labels-small-business/'">
+          <div class="pc-img"><div class="pc-img-word">MOQ</div></div>
+          <div class="pc-body">
+            <span class="post-cat">How-To</span>
+            <h2 class="pc-title">Custom Labels for Small Business: MOQ, Materials and Costs Explained</h2>
+            <p class="pc-excerpt">What small business owners need to understand about minimum order quantities, substrate costs and lead times before placing a label order.</p>
+            <div class="pc-footer">
+              <span class="pc-meta">Coming Soon</span>
+              <span class="arrow-link" style="font-size:9px;">Read →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="product-focus"
+                 onclick="location.href='/blog/wrap-around-labels/'">
+          <div class="pc-img"><div class="pc-img-word">360</div></div>
+          <div class="pc-body">
+            <span class="post-cat">Product Focus</span>
+            <h2 class="pc-title">Wrap-Around Labels: When and Why to Use Them</h2>
+            <p class="pc-excerpt">The applications, container requirements and print considerations for wrap-around label formats across all three label types.</p>
+            <div class="pc-footer">
+              <span class="pc-meta">Coming Soon</span>
+              <span class="arrow-link" style="font-size:9px;">Read →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="buyer-guides"
+                 onclick="location.href='/blog/packaging-labels-guide/'">
+          <div class="pc-img"><div class="pc-img-word">PKG</div></div>
+          <div class="pc-body">
+            <span class="post-cat">Buyer Guide</span>
+            <h2 class="pc-title">Packaging Labels: A Guide for South African Product Manufacturers</h2>
+            <p class="pc-excerpt">A complete overview of packaging label formats, substrate options and compliance considerations for SA manufacturers.</p>
+            <div class="pc-footer">
+              <span class="pc-meta">Coming Soon</span>
+              <span class="arrow-link" style="font-size:9px;">Read →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="industry"
+                 onclick="location.href='/blog/branded-stickers-for-packaging/'">
+          <div class="pc-img"><div class="pc-img-word">BRD</div></div>
+          <div class="pc-body">
+            <span class="post-cat">Industry</span>
+            <h2 class="pc-title">Branded Stickers for Packaging: What Procurement Managers Need to Know</h2>
+            <p class="pc-excerpt">Substrate selection, print finishes and MOQ considerations for branded packaging sticker labels in South Africa.</p>
+            <div class="pc-footer">
+              <span class="pc-meta">Coming Soon</span>
+              <span class="arrow-link" style="font-size:9px;">Read →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="product-focus"
+                 onclick="location.href='/blog/heat-shrink-vs-adhesive-labels/'">
+          <div class="pc-img"><div class="pc-img-word">VS</div></div>
+          <div class="pc-body">
+            <span class="post-cat">Product Focus</span>
+            <h2 class="pc-title">Heat Shrink Sleeve Labels vs Adhesive Labels: Which is Right for Your Product?</h2>
+            <p class="pc-excerpt">A direct comparison of both formats across cost, coverage, container compatibility and production volume requirements.</p>
+            <div class="pc-footer">
+              <span class="pc-meta">Coming Soon</span>
+              <span class="arrow-link" style="font-size:9px;">Read →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="materials"
+                 onclick="location.href='/blog/clear-bopp-labels/'">
+          <div class="pc-img"><div class="pc-img-word">CLR</div></div>
+          <div class="pc-body">
+            <span class="post-cat">Materials</span>
+            <h2 class="pc-title">Clear BOPP Labels: When Transparency Sells Your Product</h2>
+            <p class="pc-excerpt">How to specify transparent BOPP labels correctly, avoid common application failures and achieve the no-label look on any container.</p>
+            <div class="pc-footer">
+              <span class="pc-meta">Coming Soon</span>
+              <span class="arrow-link" style="font-size:9px;">Read →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="materials"
+                 onclick="location.href='/blog/waterproof-labels-south-africa/'">
+          <div class="pc-img"><div class="pc-img-word">H2O</div></div>
+          <div class="pc-body">
+            <span class="post-cat">Materials</span>
+            <h2 class="pc-title">Waterproof Labels for South African Outdoor and Industrial Use</h2>
+            <p class="pc-excerpt">Which substrates and adhesive systems perform in wet, cold, chemical and outdoor environments across South African industries.</p>
+            <div class="pc-footer">
+              <span class="pc-meta">Coming Soon</span>
+              <span class="arrow-link" style="font-size:9px;">Read →</span>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /postGrid -->
+
+      <!-- PAGINATION -->
+      <nav class="blog-pagination fade-in d3" aria-label="Blog pages">
+        <a class="pg-btn" href="#">← Prev</a>
+        <a class="pg-btn active" href="#">1</a>
+        <a class="pg-btn" href="#">2</a>
+        <a class="pg-btn" href="#">3</a>
+        <span class="pg-dots">…</span>
+        <a class="pg-btn" href="#">8</a>
+        <a class="pg-btn" href="#">Next →</a>
+      </nav>
+
+    </div><!-- /left -->
+
+    <!-- SIDEBAR -->
+    <aside class="blog-sidebar">
+
+      <!-- Quote CTA -->
+      <div class="sw sw-cta">
+        <div class="sw-head">
+          <span>Ready to order?</span>
+          <span class="accent">// QUOTE</span>
+        </div>
+        <div class="sw-body">
+          <p>Tell us your product, volume and material. Our production team quotes within one business day.</p>
+          <a href="/contact/" class="sw-btn-primary">Request a Quote →</a>
+          <a href="https://wa.me/27XXXXXXXXX?text=Hi%20Labelex%2C%20I%20found%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20label%20products."
+             class="sw-btn-wa" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+
+      <!-- Most Read -->
+      <div class="sw">
+        <div class="sw-head">Most Read</div>
+        <div class="sw-body" style="padding:16px 20px;">
+          <div class="pop-list">
+            <a class="pop-item" href="/blog/self-adhesive-labels-guide/">
+              <div class="pop-n">01</div>
+              <div class="pop-info">
+                <div class="pop-t">Self Adhesive Labels: The Complete Guide</div>
+                <div class="pop-d">7 Jun 2025</div>
+              </div>
+            </a>
+            <a class="pop-item" href="/blog/cosmetic-label-manufacturing/">
+              <div class="pop-n">02</div>
+              <div class="pop-info">
+                <div class="pop-t">Cosmetic Label Manufacturing in South Africa</div>
+                <div class="pop-d">Coming Soon</div>
+              </div>
+            </a>
+            <a class="pop-item" href="/blog/bottle-label-printing/">
+              <div class="pop-n">03</div>
+              <div class="pop-info">
+                <div class="pop-t">Bottle Label Printing: What Every Beverage Brand Needs to Know</div>
+                <div class="pop-d">Coming Soon</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Topics -->
+      <div class="sw">
+        <div class="sw-head">Browse by Topic</div>
+        <div class="sw-body">
+          <div class="topics-wrap">
+            <button class="tpill active" onclick="filterPosts('all',null)">All</button>
+            <button class="tpill" onclick="filterPosts('buyer-guides',null)">Buyer Guides</button>
+            <button class="tpill" onclick="filterPosts('industry',null)">Industry</button>
+            <button class="tpill" onclick="filterPosts('materials',null)">Materials</button>
+            <button class="tpill" onclick="filterPosts('how-to',null)">How-To</button>
+            <button class="tpill" onclick="filterPosts('product-focus',null)">Product Focus</button>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+  </div><!-- /blog-layout -->
+</main>
+
+<!-- ░░ FOOTER ░░ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:16px;">LABEL<span class="ex">EX</span></div>
+        <p>Labelex is a sticker and label manufacturer based in Gauteng, South Africa. We produce self adhesive labels, heat shrink sleeves and hot melt glue labels for businesses nationwide. 16 years in the label industry.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <a href="/products/#adhesive">Adhesive Sticker Labels</a>
+        <a href="/products/#shrink">Heat Shrink Sleeves</a>
+        <a href="/products/#hotmelt">Hot Melt Labels</a>
+        <a href="/products/">All Materials</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/blog/">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="https://wa.me/27XXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:hello@labelex.co.za">Email</a>
+        <a href="/contact/">Quote Form</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Labelex · Label Manufacturer · Gauteng, South Africa</div>
+      <div>Built for procurement.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ░░ WHATSAPP FLOAT ░░ -->
+<a href="https://wa.me/27XXXXXXXXX?text=Hi%20Labelex%2C%20I%20found%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20label%20products."
+   class="sticky-wa" target="_blank" rel="noopener" aria-label="Chat with Labelex on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  var burger = document.getElementById('burgerBtn');
+  var menu   = document.getElementById('mobileMenu');
+  burger.addEventListener('click', function() {
+    menu.classList.toggle('open');
+    burger.classList.toggle('active');
+  });
+  menu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      menu.classList.remove('open');
+      burger.classList.remove('active');
+    });
+  });
+
+  function filterPosts(cat, btn) {
+    if (btn) {
+      document.querySelectorAll('.ftag').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+    }
+    document.querySelectorAll('.tpill').forEach(function(p) { p.classList.remove('active'); });
+    var matchPill = Array.from(document.querySelectorAll('.tpill')).find(function(p) {
+      var attr = p.getAttribute('onclick') || '';
+      return cat === 'all' ? attr.includes("'all'") : attr.includes("'" + cat + "'");
+    });
+    if (matchPill) matchPill.classList.add('active');
+
+    var featured = document.querySelector('.featured-post');
+    if (featured) featured.style.display = (cat === 'all' || featured.dataset.category === cat) ? '' : 'none';
+
+    document.querySelectorAll('#postGrid .post-card').forEach(function(card) {
+      card.style.display = (cat === 'all' || card.dataset.category === cat) ? '' : 'none';
+    });
+  }
+</script>
+</body>
+</html>
