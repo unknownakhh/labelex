@@ -37,6 +37,31 @@
     padding: 8px;
   }
 
+  /* PRODUCT SHOWCASE BAND */
+  .dd-showcase-frame {
+    position: relative;
+    border: 1px solid var(--rule);
+    background: var(--paper-2);
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  .dd-showcase-frame::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(135deg, transparent 0 14px, rgba(11,42,91,0.03) 14px 15px);
+    pointer-events: none;
+  }
+  .dd-showcase-frame img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+  }
+  @media (max-width: 768px) {
+    .dd-showcase-frame { aspect-ratio: 4 / 3; }
+  }
+
   /* PROCESS BLOCK */
   .process-block {
     background: var(--paper-2);
@@ -191,6 +216,13 @@
       </div>
     </div>
 
+    <!-- Showcase hero — represents the full adhesive sticker label range -->
+    <div class="dd-block">
+      <div class="dd-showcase-frame">
+        <img src="../img/product/AdhesiveHero.png" alt="Self adhesive sticker labels applied across a wine bottle, supplement bottle, honey jar, cosmetic tin and kraft stand-up pouch — the Labelex adhesive label range" loading="lazy">
+      </div>
+    </div>
+
     <div class="dd-block">
       <div class="dd-subhead"><span>Substrates · Adhesive</span><span class="count">07 stocks</span></div>
       <div class="materials-grid">
@@ -201,20 +233,6 @@
         <div class="matcard"><div class="matcard-swatch swatch-silver"></div><div class="matcard-name">Bright Silver Film</div><div class="matcard-meta">METALLISED · MIRROR</div></div>
         <div class="matcard"><div class="matcard-swatch swatch-kraft"></div><div class="matcard-name">Kraft Paper</div><div class="matcard-meta">NATURAL · ARTISAN</div></div>
         <div class="matcard"><div class="matcard-swatch swatch-luxury"></div><div class="matcard-name">Luxury Texture</div><div class="matcard-meta">EMBOSSED · TACTILE</div></div>
-      </div>
-    </div>
-
-    <div class="dd-block">
-      <div class="dd-subhead"><span>Portfolio · Adhesive Sticker Labels</span><span class="count">08 examples</span></div>
-      <div class="portfolio-grid">
-        <div class="pf-card"><div class="pf-visual pf-visual--photo"><img src="../img/portfolio/adhesive/Wine Bottle.png" alt="Adhesive sticker label on a wine bottle" loading="lazy"></div><div class="pf-meta"><div class="pf-tag">Wine & Spirits</div><div class="pf-name">Wine Bottle Label</div></div></div>
-        <div class="pf-card"><div class="pf-visual pf-visual--photo"><img src="../img/portfolio/adhesive/Cosmetic Jar.png" alt="Adhesive sticker label on a cosmetic jar" loading="lazy"></div><div class="pf-meta"><div class="pf-tag">Cosmetics</div><div class="pf-name">Cosmetic Jar Label</div></div></div>
-        <div class="pf-card"><div class="pf-visual pf-visual--photo"><img src="../img/portfolio/adhesive/Supplement Bottle.png" alt="Adhesive sticker label on a supplement bottle" loading="lazy"></div><div class="pf-meta"><div class="pf-tag">Pharmaceutical</div><div class="pf-name">Supplement Bottle</div></div></div>
-        <div class="pf-card"><div class="pf-visual pf-visual--photo"><img src="../img/portfolio/adhesive/Honey Jar.png" alt="Adhesive sticker label on a honey jar" loading="lazy"></div><div class="pf-meta"><div class="pf-tag">Food</div><div class="pf-name">Honey Jar Label</div></div></div>
-        <div class="pf-card"><div class="pf-visual pf-visual--photo"><img src="../img/portfolio/adhesive/Cleaning Product.png" alt="Adhesive sticker label on a cleaning product bottle" loading="lazy"></div><div class="pf-meta"><div class="pf-tag">Household</div><div class="pf-name">Cleaning Product</div></div></div>
-        <div class="pf-card"><div class="pf-visual pf-visual--photo"><img src="../img/portfolio/adhesive/Coffee Bag.png" alt="Adhesive sticker label on a coffee bag" loading="lazy"></div><div class="pf-meta"><div class="pf-tag">Beverage</div><div class="pf-name">Coffee Bag Label</div></div></div>
-        <div class="pf-card"><div class="pf-visual pf-visual--photo"><img src="../img/portfolio/adhesive/Bar Soap.png" alt="Adhesive sticker label on a bar soap wrapper" loading="lazy"></div><div class="pf-meta"><div class="pf-tag">Personal Care</div><div class="pf-name">Bar Soap Wrapper</div></div></div>
-        <div class="pf-card"><div class="pf-visual pf-visual--photo"><img src="../img/portfolio/adhesive/Pesticide Container.png" alt="Adhesive sticker label on a pesticide container" loading="lazy"></div><div class="pf-meta"><div class="pf-tag">Agricultural</div><div class="pf-name">Pesticide Container</div></div></div>
       </div>
     </div>
   </div>
@@ -250,26 +268,19 @@
       </div>
     </div>
 
+    <!-- Showcase hero — represents the full heat shrink sleeve range -->
+    <div class="dd-block">
+      <div class="dd-showcase-frame">
+        <img src="../img/product/HeatShrinkHero.png" alt="Full body heat shrink sleeve labels with 360 degree wraparound coverage on a contoured bottle, slim can, square jug and cylindrical container — the Labelex heat shrink sleeve range" loading="lazy">
+      </div>
+    </div>
+
     <div class="dd-block">
       <div class="dd-subhead"><span>Films · Heat Shrink</span><span class="count">03 stocks</span></div>
       <div class="materials-grid">
         <div class="matcard"><div class="matcard-swatch swatch-petg"></div><div class="matcard-name">PETG</div><div class="matcard-meta">CLEAR · HIGH SHRINK</div></div>
         <div class="matcard"><div class="matcard-swatch swatch-pvc"></div><div class="matcard-name">PVC</div><div class="matcard-meta">STANDARD · ECONOMICAL</div></div>
         <div class="matcard"><div class="matcard-swatch swatch-shrink"></div><div class="matcard-name">Opaque White Shrink</div><div class="matcard-meta">FULL COVER · BARRIER</div></div>
-      </div>
-    </div>
-
-    <div class="dd-block">
-      <div class="dd-subhead"><span>Portfolio · Heat Shrink Sleeves</span><span class="count">06 examples</span></div>
-      <div class="portfolio-grid">
-        <!-- Real photo -->
-        <div class="pf-card"><div class="pf-visual pf-visual--photo"><img src="../img/portfolio/shrink/Soft Drink Bottle.png" alt="Heat shrink sleeve label on a soft drink PET bottle" loading="lazy"></div><div class="pf-meta"><div class="pf-tag">Beverage</div><div class="pf-name">Soft Drink Bottle</div></div></div>
-        <!-- SVG placeholders — replace as photos are added -->
-        <div class="pf-card"><div class="pf-visual"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M 32 14 L 68 14 L 70 32 Q 76 40 76 54 Q 76 68 70 76 L 68 88 L 32 88 L 30 76 Q 24 68 24 54 Q 24 40 30 32 Z" fill="#ED6B1F" opacity="0.2" stroke="#ED6B1F" stroke-width="1.5"/><rect x="28" y="38" width="44" height="36" fill="#ED6B1F" opacity="0.3"/><rect x="36" y="48" width="28" height="3" fill="#ED6B1F"/><rect x="36" y="56" width="20" height="1.5" fill="#ED6B1F" opacity="0.8"/></svg></div><div class="pf-meta"><div class="pf-tag">Dairy</div><div class="pf-name">Yoghurt Container</div></div></div>
-        <div class="pf-card"><div class="pf-visual"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M 38 10 L 62 10 L 62 26 L 70 32 L 70 86 Q 70 92 64 92 L 36 92 Q 30 92 30 86 L 30 32 L 38 26 Z" fill="#ED6B1F" opacity="0.2" stroke="#ED6B1F" stroke-width="1.5"/><rect x="34" y="40" width="32" height="42" fill="#ED6B1F" opacity="0.3"/><rect x="40" y="48" width="20" height="3" fill="#ED6B1F"/><rect x="40" y="56" width="14" height="1.5" fill="#ED6B1F" opacity="0.8"/><rect x="40" y="62" width="16" height="1.5" fill="#ED6B1F" opacity="0.8"/></svg></div><div class="pf-meta"><div class="pf-tag">Pharmaceutical</div><div class="pf-name">Vitamin Bottle</div></div></div>
-        <div class="pf-card"><div class="pf-visual"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M 30 12 L 70 12 L 72 28 L 78 50 L 72 72 L 70 88 L 30 88 L 28 72 L 22 50 L 28 28 Z" fill="#ED6B1F" opacity="0.2" stroke="#ED6B1F" stroke-width="1.5"/><rect x="26" y="36" width="48" height="32" fill="#ED6B1F" opacity="0.3"/><rect x="34" y="44" width="32" height="3" fill="#ED6B1F"/><rect x="34" y="52" width="22" height="1.5" fill="#ED6B1F" opacity="0.8"/><rect x="34" y="58" width="26" height="1.5" fill="#ED6B1F" opacity="0.8"/></svg></div><div class="pf-meta"><div class="pf-tag">Personal Care</div><div class="pf-name">Shampoo Bottle</div></div></div>
-        <div class="pf-card"><div class="pf-visual"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M 36 14 L 64 14 L 64 24 L 72 32 L 72 88 Q 72 92 68 92 L 32 92 Q 28 92 28 88 L 28 32 L 36 24 Z" fill="#ED6B1F" opacity="0.2" stroke="#ED6B1F" stroke-width="1.5"/><rect x="32" y="40" width="36" height="40" fill="#ED6B1F" opacity="0.3"/><rect x="38" y="48" width="24" height="3" fill="#ED6B1F"/><rect x="38" y="56" width="18" height="1.5" fill="#ED6B1F" opacity="0.8"/></svg></div><div class="pf-meta"><div class="pf-tag">FMCG</div><div class="pf-name">Energy Drink Can</div></div></div>
-        <div class="pf-card"><div class="pf-visual"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M 34 10 L 66 10 L 68 24 L 74 38 L 74 64 L 68 78 L 66 90 L 34 90 L 32 78 L 26 64 L 26 38 L 32 24 Z" fill="#ED6B1F" opacity="0.2" stroke="#ED6B1F" stroke-width="1.5"/><rect x="30" y="34" width="40" height="36" fill="#ED6B1F" opacity="0.3"/><rect x="38" y="42" width="24" height="3" fill="#ED6B1F"/><rect x="38" y="50" width="18" height="1.5" fill="#ED6B1F" opacity="0.8"/><rect x="38" y="56" width="22" height="1.5" fill="#ED6B1F" opacity="0.8"/></svg></div><div class="pf-meta"><div class="pf-tag">Household Chemical</div><div class="pf-name">Detergent Bottle</div></div></div>
       </div>
     </div>
   </div>
@@ -305,25 +316,19 @@
       </div>
     </div>
 
+    <!-- Showcase hero — represents the full hot melt glue label range -->
+    <div class="dd-block">
+      <div class="dd-showcase-frame">
+        <img src="../img/product/HotMeltHero.png" alt="Hot melt glue wraparound labels on a beer bottle, spirit bottle, clear PET bottle, pump bottle and aluminium can — the Labelex hot melt cylindrical label range" loading="lazy">
+      </div>
+    </div>
+
     <div class="dd-block">
       <div class="dd-subhead"><span>Films · Hot Melt</span><span class="count">03 stocks</span></div>
       <div class="materials-grid">
         <div class="matcard"><div class="matcard-swatch swatch-wbopp"></div><div class="matcard-name">White BOPP</div><div class="matcard-meta">OPAQUE · DURABLE</div></div>
         <div class="matcard"><div class="matcard-swatch swatch-cbopp"></div><div class="matcard-name">Clear BOPP</div><div class="matcard-meta">TRANSPARENT · GLOSS</div></div>
         <div class="matcard"><div class="matcard-swatch swatch-pe"></div><div class="matcard-name">PE Film</div><div class="matcard-meta">FLEXIBLE · SQUEEZE</div></div>
-      </div>
-    </div>
-
-    <div class="dd-block">
-      <div class="dd-subhead"><span>Portfolio · Hot Melt Glue Labels</span><span class="count">06 examples</span></div>
-      <div class="portfolio-grid">
-        <!-- All SVG placeholders — replace as photos are added to img/portfolio/hotmelt/ -->
-        <div class="pf-card"><div class="pf-visual"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="14" rx="14" ry="2" fill="none" stroke="#ED6B1F" stroke-width="1.5"/><path d="M 36 14 L 36 28 L 30 36 L 30 88 Q 30 92 34 92 L 66 92 Q 70 92 70 88 L 70 36 L 64 28 L 64 14" fill="none" stroke="#ED6B1F" stroke-width="1.5"/><rect x="32" y="48" width="36" height="30" fill="#ED6B1F" opacity="0.3"/><rect x="38" y="56" width="24" height="3" fill="#ED6B1F"/><rect x="38" y="64" width="18" height="1.5" fill="#ED6B1F" opacity="0.7"/></svg></div><div class="pf-meta"><div class="pf-tag">Beverage</div><div class="pf-name">Beer Bottle Label</div></div></div>
-        <div class="pf-card"><div class="pf-visual"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="14" rx="20" ry="3" fill="none" stroke="#ED6B1F" stroke-width="1.5"/><path d="M 30 14 L 30 88 Q 30 92 34 92 L 66 92 Q 70 92 70 88 L 70 14" fill="none" stroke="#ED6B1F" stroke-width="1.5"/><rect x="32" y="40" width="36" height="36" fill="#ED6B1F" opacity="0.3"/><rect x="38" y="48" width="24" height="3" fill="#ED6B1F"/><rect x="38" y="56" width="18" height="1.5" fill="#ED6B1F" opacity="0.7"/><rect x="38" y="62" width="22" height="1.5" fill="#ED6B1F" opacity="0.7"/></svg></div><div class="pf-meta"><div class="pf-tag">Beverage</div><div class="pf-name">Soft Drink PET</div></div></div>
-        <div class="pf-card"><div class="pf-visual"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="14" rx="18" ry="2" fill="none" stroke="#ED6B1F" stroke-width="1.5"/><path d="M 32 14 L 32 88 L 68 88 L 68 14" fill="none" stroke="#ED6B1F" stroke-width="1.5"/><rect x="34" y="32" width="32" height="44" fill="#ED6B1F" opacity="0.3"/><rect x="40" y="40" width="20" height="3" fill="#ED6B1F"/><rect x="40" y="48" width="14" height="1.5" fill="#ED6B1F" opacity="0.7"/><rect x="40" y="56" width="16" height="1.5" fill="#ED6B1F" opacity="0.7"/></svg></div><div class="pf-meta"><div class="pf-tag">Beverage</div><div class="pf-name">Aluminium Can</div></div></div>
-        <div class="pf-card"><div class="pf-visual"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="16" rx="22" ry="3" fill="none" stroke="#ED6B1F" stroke-width="1.5"/><path d="M 28 16 L 28 84 Q 28 92 36 92 L 64 92 Q 72 92 72 84 L 72 16" fill="none" stroke="#ED6B1F" stroke-width="1.5"/><rect x="30" y="36" width="40" height="40" fill="#ED6B1F" opacity="0.3"/><rect x="36" y="44" width="28" height="3" fill="#ED6B1F"/><rect x="36" y="52" width="20" height="1.5" fill="#ED6B1F" opacity="0.7"/><rect x="36" y="58" width="24" height="1.5" fill="#ED6B1F" opacity="0.7"/></svg></div><div class="pf-meta"><div class="pf-tag">Food</div><div class="pf-name">Sauce Jar</div></div></div>
-        <div class="pf-card"><div class="pf-visual"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="14" rx="16" ry="2" fill="none" stroke="#ED6B1F" stroke-width="1.5"/><path d="M 34 14 L 34 88 Q 34 92 38 92 L 62 92 Q 66 92 66 88 L 66 14" fill="none" stroke="#ED6B1F" stroke-width="1.5"/><rect x="36" y="36" width="28" height="40" fill="#ED6B1F" opacity="0.3"/><rect x="40" y="44" width="20" height="3" fill="#ED6B1F"/><rect x="40" y="52" width="14" height="1.5" fill="#ED6B1F" opacity="0.7"/><rect x="40" y="58" width="18" height="1.5" fill="#ED6B1F" opacity="0.7"/></svg></div><div class="pf-meta"><div class="pf-tag">Wine & Spirits</div><div class="pf-name">Spirit Bottle</div></div></div>
-        <div class="pf-card"><div class="pf-visual"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="14" rx="20" ry="3" fill="none" stroke="#ED6B1F" stroke-width="1.5"/><path d="M 30 14 L 30 76 Q 30 88 50 92 Q 70 88 70 76 L 70 14" fill="none" stroke="#ED6B1F" stroke-width="1.5"/><rect x="32" y="36" width="36" height="34" fill="#ED6B1F" opacity="0.3"/><rect x="38" y="44" width="24" height="3" fill="#ED6B1F"/><rect x="38" y="52" width="18" height="1.5" fill="#ED6B1F" opacity="0.7"/></svg></div><div class="pf-meta"><div class="pf-tag">Personal Care</div><div class="pf-name">Lotion Bottle</div></div></div>
       </div>
     </div>
   </div>
