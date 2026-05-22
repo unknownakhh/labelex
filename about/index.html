@@ -129,7 +129,7 @@
     border-bottom: none;
     font-weight: 700;
   }
-  .mobile-menu .mobile-menu-cta:hover { background: #b0e600; color: #0e0e0e; }
+  .mobile-menu .mobile-menu-cta:hover { background: var(--lime-deep); color: #fff; }
   .menu-icon.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .menu-icon.active span:nth-child(2) { opacity: 0; }
   .menu-icon.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
@@ -152,7 +152,7 @@
       <a href="../blog/">Blog</a>
     </div>
     <div class="nav-cta">
-      <a href="../contact/" class="btn-quote">Get Quote →</a>
+      <a href="../contact/#quote-form" class="btn-quote">Get Quote →</a>
       <div class="menu-icon" id="burgerBtn" aria-label="Open menu">
         <span></span><span></span><span></span>
       </div>
@@ -165,7 +165,7 @@
   <a href="../about/">About</a>
   <a href="../contact/">Contact</a>
   <a href="../blog/">Blog</a>
-  <a href="../contact/" class="mobile-menu-cta">Get Quote →</a>
+  <a href="../contact/#quote-form" class="mobile-menu-cta">Get Quote →</a>
 </div>
 
 <section class="page-hero">
@@ -415,68 +415,37 @@
 
 <section class="final-cta">
   <div class="wrap">
-    <div class="final-grid">
-      <div>
-        <div class="eyebrow dark" style="margin-bottom:24px;">Get a Quote</div>
-        <h2>Send us<br/>the brief.</h2>
-        <p class="lead">Two ways to reach us. Pick what works for you. You will receive a real reply from our team, Monday to Friday between 08:00 and 17:00.</p>
+    <div class="final-head">
+      <div class="eyebrow dark" style="margin-bottom:24px;">Get a Quote</div>
+      <h2>Send us the brief.</h2>
+      <p class="lead">Three ways to reach us. Pick what works for you. You will receive a real reply from our team, Monday to Friday between 08:00 and 17:00.</p>
+    </div>
 
-        <div class="final-channels" style="display:flex;flex-direction:column;gap:1px;">
-          <a href="https://wa.me/27000000000?text=Hi%20Labelex%2C%20I%20found%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20label%20products." class="channel" target="_blank" rel="noopener" style="min-height:110px;display:flex;align-items:center;">
-            <div class="channel-l" style="flex:1;">
-              <div class="ch-tag">Fastest response</div>
-              <h4>WhatsApp</h4>
-              <p>+27 [PENDING] Send us your artwork, samples or photos directly.</p>
-            </div>
-            <div class="ch-arrow">→</div>
-          </a>
-          <a href="mailto:info@labelex.co.za" class="channel" style="min-height:110px;display:flex;align-items:center;">
-            <div class="channel-l" style="flex:1;">
-              <div class="ch-tag">Response within 24 hours</div>
-              <h4>Email</h4>
-              <p>[PENDING]@labelex.co.za</p>
-            </div>
-            <div class="ch-arrow">→</div>
-          </a>
+    <div class="final-channels">
+      <a href="https://wa.me/27XXXXXXXXX?text=Hi%20Labelex%2C%20I%20found%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20label%20products." class="channel" target="_blank" rel="noopener">
+        <div class="channel-l">
+          <div class="ch-tag">Fastest response</div>
+          <h4>WhatsApp</h4>
+          <p>Send us your artwork, samples or photos directly.</p>
         </div>
-      </div>
-
-      <form class="form-card" action="https://formspree.io/f/xojbwqzo" method="POST">
-        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div class="form-eyebrow">// QUOTE FORM</div>
-        <h3>Tell us what you need.</h3>
-        <div class="form-row two">
-          <div class="form-field"><label for="fname">First Name</label><input type="text" name="first_name" id="fname" required></div>
-          <div class="form-field"><label for="lname">Last Name</label><input type="text" name="last_name" id="lname" required></div>
+        <div class="ch-arrow">→</div>
+      </a>
+      <a href="mailto:info@labelex.co.za" class="channel">
+        <div class="channel-l">
+          <div class="ch-tag">Response within 24 hours</div>
+          <h4>Email</h4>
+          <p>info@labelex.co.za</p>
         </div>
-        <div class="form-row">
-          <div class="form-field"><label for="company">Company</label><input type="text" name="company" id="company" required></div>
+        <div class="ch-arrow">→</div>
+      </a>
+      <a href="../contact/#quote-form" class="channel">
+        <div class="channel-l">
+          <div class="ch-tag">Most detailed</div>
+          <h4>Quote Form</h4>
+          <p>Step-by-step brief with full project specs.</p>
         </div>
-        <div class="form-row two">
-          <div class="form-field"><label for="email">Email</label><input type="email" name="email" id="email" required></div>
-          <div class="form-field"><label for="whatsapp">WhatsApp Number</label><input type="tel" name="whatsapp" id="whatsapp" required></div>
-        </div>
-        <div class="form-row">
-          <div class="form-field">
-            <label for="product">Product Interest</label>
-            <select name="product_interest" id="product" required>
-              <option value="">Select a category</option>
-              <option value="adhesive">Adhesive Sticker Labels</option>
-              <option value="shrink">Heat Shrink Sleeves</option>
-              <option value="hotmelt">Hot Melt Glue Labels</option>
-              <option value="multiple">Multiple or not sure</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-field">
-            <label for="message">Tell us about your order. Include quantities, your deadline and what you are labelling.</label>
-            <textarea name="message" id="message" rows="4" required></textarea>
-          </div>
-        </div>
-        <button type="submit" class="form-submit">Send Brief <span>→</span></button>
-        <div class="form-disclaimer">Your enquiry goes directly to our team. We use your details to prepare your quote and nothing else.</div>
-      </form>
+        <div class="ch-arrow">→</div>
+      </a>
     </div>
   </div>
 </section>
@@ -505,7 +474,7 @@
         <h5>Contact</h5>
         <a href="https://wa.me/27000000000" target="_blank" rel="noopener">WhatsApp</a>
         <a href="mailto:info@labelex.co.za">Email</a>
-        <a href="../contact/">Quote Form</a>
+        <a href="../contact/#quote-form">Quote Form</a>
       </div>
     </div>
     <div class="footer-bottom">

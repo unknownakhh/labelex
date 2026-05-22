@@ -220,7 +220,7 @@ body {
 
 .hero h1 {
   font-family: "Barlow Condensed", sans-serif;
-  font-size: clamp(44px, 8vw, 96px);
+  font-size: clamp(40px, 5vw, 72px);
   font-weight: 800;
   line-height: 0.97;
   letter-spacing: -0.02em;
@@ -572,6 +572,14 @@ body {
 
 .final-grid { display: grid; grid-template-columns: 1fr; gap: 56px; position: relative; z-index: 2; }
 @media (min-width: 1000px) { .final-grid { grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; } }
+
+.final-head { max-width: 720px; margin-bottom: 48px; position: relative; z-index: 2; }
+@media (min-width: 768px) { .final-head { margin-bottom: 64px; } }
+@media (min-width: 1000px) {
+  .final-channels { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .final-channels .channel { border-bottom: none; border-right: 1px solid rgba(255,255,255,0.1); }
+  .final-channels .channel:last-child { border-right: none; }
+}
 
 .final-cta h2 { font-family: "Barlow Condensed", sans-serif; font-size: clamp(40px, 7vw, 80px); font-weight: 800; line-height: 0.97; letter-spacing: -0.02em; margin-bottom: 24px; color: #fff; }
 .final-cta .lead { font-size: clamp(15px, 2vw, 18px); line-height: 1.55; margin-bottom: 32px; max-width: 480px; color: rgba(255,255,255,0.7); }
