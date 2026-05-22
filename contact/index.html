@@ -45,18 +45,18 @@
   .mobile-menu { display:none; position:fixed; top:57px; left:0; right:0; bottom:0; background:#0e0e0e; z-index:49; flex-direction:column; padding:32px 24px; gap:0; overflow-y:auto; }
   .mobile-menu.open { display:flex; }
   .mobile-menu a { font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#f0f0f0; text-decoration:none; padding:20px 0; border-bottom:1px solid rgba(255,255,255,0.08); transition:color 0.2s; }
-  .mobile-menu a:hover { color:#c6ff00; }
-  .mobile-menu .mobile-menu-cta { background:#c6ff00; color:#0e0e0e; text-align:center; padding:16px 24px; margin-top:28px; border-bottom:none; font-weight:700; }
+  .mobile-menu a:hover { color:#ED6B1F; }
+  .mobile-menu .mobile-menu-cta { background:#ED6B1F; color:#ffffff; text-align:center; padding:16px 24px; margin-top:28px; border-bottom:none; font-weight:700; }
   .menu-icon.active span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
   .menu-icon.active span:nth-child(2) { opacity:0; }
   .menu-icon.active span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
   .menu-icon span { transition:transform 0.25s ease, opacity 0.25s ease; }
-  .faq-item.open .faq-toggle { background: #c6ff00 !important; border-color: #c6ff00 !important; color: #0e0e0e !important; }
-  .faq-item.open > .faq-question { background: #c6ff00 !important; color: #0e0e0e !important; }
-  .faq-item.open > .faq-question span:first-child { color: #0e0e0e !important; }
-  .faq-item:not(.open) .faq-question:hover { background: #c6ff00 !important; color: #0e0e0e !important; cursor: pointer; }
-  .faq-item:not(.open) .faq-question:hover span { color: #0e0e0e !important; }
-  .faq-item:not(.open) .faq-question:hover .faq-toggle { border-color: #0e0e0e !important; }
+  .faq-item.open .faq-toggle { background: #ED6B1F !important; border-color: #ED6B1F !important; color: #ffffff !important; }
+  .faq-item.open > .faq-question { background: #ED6B1F !important; color: #ffffff !important; }
+  .faq-item.open > .faq-question span:first-child { color: #ffffff !important; }
+  .faq-item:not(.open) .faq-question:hover { background: #ED6B1F !important; color: #ffffff !important; cursor: pointer; }
+  .faq-item:not(.open) .faq-question:hover span { color: #ffffff !important; }
+  .faq-item:not(.open) .faq-question:hover .faq-toggle { border-color: #ffffff !important; }
   .faq-question { transition: background 0.2s, color 0.2s; }
   #faq { padding-top: 40px !important; }
 </style>
@@ -120,7 +120,7 @@
         <div class="cc-cta"><span>Open WhatsApp</span><span class="arrow">→</span></div>
       </a>
 
-      <a href="mailto:hello@labelex.co.za" class="cc-card">
+      <a href="mailto:info@labelex.co.za" class="cc-card">
         <div class="cc-rank">RESPONSE WITHIN 24 HOURS</div>
         <h3>Email</h3>
         <p>Attach your artwork, existing briefs or supplier documentation. Best for procurement processes that require a paper trail. Monday to Friday 08:00 to 17:00.</p>
@@ -145,7 +145,8 @@
       <p>Three steps. Tell us what you need and your details follow. The more accurate the spec, the faster and tighter the quote we can return.</p>
     </div>
 
-    <form class="quote-form-block" id="quoteForm" action="https://formspree.io/f/PENDING" method="POST">
+    <form class="quote-form-block" id="quoteForm" action="https://formspree.io/f/xojbwqzo" method="POST">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="qf-step">
         <div class="qf-step-header">
           <div><div class="qf-num">STEP 01</div><h3>Project specs.</h3></div>
@@ -443,7 +444,7 @@
       <div class="footer-col">
         <h5>Contact</h5>
         <a href="https://wa.me/27000000000" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="mailto:hello@labelex.co.za">Email</a>
+        <a href="mailto:info@labelex.co.za">Email</a>
         <a href="../contact/#quote-form">Quote Form</a>
       </div>
     </div>
