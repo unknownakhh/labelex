@@ -1067,3 +1067,31 @@ body {
 .hours-cell .hc-val { font-family: "Barlow Condensed", sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.01em; line-height: 1.2; margin-bottom: 6px; color: var(--ink); }
 .hours-cell .hc-val.lime { color: var(--lime); }
 .hours-cell .hc-desc { font-size: 12px; color: var(--ink-3); line-height: 1.55; }
+
+/* ============================================================================
+   COOKIE CONSENT BANNER (site-wide, brand-aligned)
+   ============================================================================ */
+.cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--ink); color: rgba(255,255,255,0.75);
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding: 14px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; z-index: 999; flex-wrap: wrap;
+  font-family: 'Inter', sans-serif;
+}
+.cookie-banner p { font-size: 13px; line-height: 1.55; margin: 0; max-width: 760px; color: rgba(255,255,255,0.75); }
+.cookie-banner p a { color: var(--lime); text-decoration: underline; font-weight: 600; }
+.cookie-banner p a:hover { color: #fff; }
+.cookie-accept {
+  background: var(--lime); color: #fff; border: none;
+  padding: 10px 22px; font-family: 'Inter', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.04em;
+  text-transform: uppercase; border-radius: 999px; cursor: pointer;
+  white-space: nowrap; transition: background 0.18s;
+}
+.cookie-accept:hover { background: var(--lime-deep); }
+@media (max-width: 600px) {
+  .cookie-banner { flex-direction: column; align-items: flex-start; padding: 16px; gap: 12px; }
+  .cookie-accept { width: 100%; padding: 12px; }
+}

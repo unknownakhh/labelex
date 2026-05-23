@@ -440,6 +440,7 @@
         <a href="../about/">About</a>
         <a href="../contact/">Contact</a>
         <a href="../blog/">Blog</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
       </div>
       <div class="footer-col">
         <h5>Contact</h5>
@@ -492,5 +493,21 @@
   })();
 </script>
 
+<!-- Cookie consent banner -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>We use cookies to analyse site traffic via Google Analytics. No personal data is collected without your consent. <a href="/privacy-policy.html">Learn more</a></p>
+  <button class="cookie-accept" type="button" onclick="acceptCookies()">Accept</button>
+</div>
+<script>
+  (function(){
+    var banner = document.getElementById('cookieBanner');
+    if (!banner) return;
+    if (localStorage.getItem('cookiesAccepted')) { banner.style.display = 'none'; }
+    window.acceptCookies = function() {
+      banner.style.display = 'none';
+      localStorage.setItem('cookiesAccepted', 'true');
+    };
+  })();
+</script>
 </body>
 </html>
