@@ -728,7 +728,7 @@ body {
 
 .page-hero h1 {
   font-family: "Barlow Condensed", sans-serif;
-  font-size: clamp(38px, 7vw, 80px); font-weight: 800;
+  font-size: clamp(40px, 5vw, 72px); font-weight: 800;
   line-height: 0.97; letter-spacing: -0.02em;
   margin-bottom: 24px; max-width: 860px; color: #fff;
 }

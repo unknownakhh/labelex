@@ -135,10 +135,10 @@ html, body { max-width: 100%; overflow-x: hidden; }
 
 .post-hero h1 {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(36px, 6vw, 72px);
+  font-size: clamp(40px, 5vw, 72px);
   font-weight: 800; line-height: 0.97;
   letter-spacing: -0.02em; color: #fff;
-  margin-bottom: 28px; max-width: 800px;
+  margin-bottom: 28px; max-width: 880px;
 }
 .post-hero h1 .hl {
   background: var(--lime); color: #fff;
@@ -395,28 +395,26 @@ html, body { max-width: 100%; overflow-x: hidden; }
   line-height: 1.6; margin-bottom: 12px;
 }
 .post-cta-banner p:last-of-type { margin-bottom: 0; }
-.post-cta-banner a { color: var(--lime); font-weight: 700; text-decoration: underline; }
+.post-cta-banner p a { color: var(--lime); font-weight: 700; text-decoration: underline; }
 .pcb-btns {
   display: flex; flex-direction: column; gap: 10px; flex-shrink: 0;
+  min-width: 220px;
 }
 .pcb-btn-primary {
-  display: inline-flex; align-items: center; justify-content: center;
-  gap: 10px; padding: 14px 24px;
-  background: var(--lime); color: #fff;
-  font-family: 'Inter', sans-serif; font-size: 13px;
-  font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
-  text-decoration: none; border-radius: 999px;
-  transition: background 0.18s; white-space: nowrap;
+  display: block; text-align: center;
+  font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  padding: 13px 20px; background: var(--lime); color: #fff;
+  border-radius: 999px; text-decoration: none; transition: background 0.18s;
 }
 .pcb-btn-primary:hover { background: var(--lime-deep); }
 .pcb-btn-wa {
-  display: inline-flex; align-items: center; justify-content: center;
-  gap: 10px; padding: 13px 24px;
-  border: 1px solid #25d366; color: #25d366;
-  font-family: 'Inter', sans-serif; font-size: 13px;
-  font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
-  text-decoration: none; border-radius: 999px;
-  transition: background 0.18s; white-space: nowrap;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  padding: 12px 20px; color: #25d366;
+  border: 1px solid #25d366; border-radius: 999px;
+  text-decoration: none; transition: background 0.18s;
 }
 .pcb-btn-wa:hover { background: rgba(37,211,102,0.08); }
 
