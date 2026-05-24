@@ -1,107 +1,278 @@
 <!DOCTYPE html>
 <html lang="en-ZA">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy | Labelex — Label Manufacturer South Africa</title>
-  <meta name="description" content="Labelex privacy policy. How we collect, use, and protect your personal information in full compliance with POPIA." />
-  <meta name="robots" content="noindex, follow" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #141414; color: #e8e8e8; font-family: 'Segoe UI', Arial, sans-serif; font-size: 16px; line-height: 1.75; }
-    nav { background: #0d0d0d; border-bottom: 1px solid #1e1e1e; padding: 1.2rem 2rem; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { font-size: 1.4rem; font-weight: 800; color: #fff; letter-spacing: 0.06em; text-decoration: none; }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { color: #888; text-decoration: none; font-size: 0.88rem; letter-spacing: 0.03em; }
-    .nav-links a:hover { color: #fff; }
-    .page-header { background: #0d0d0d; border-bottom: 1px solid #1e1e1e; padding: 3.5rem 2rem 3rem; text-align: center; }
-    .page-header h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; color: #fff; letter-spacing: -0.03em; margin-bottom: 0.6rem; }
-    .page-header .meta { color: #555; font-size: 0.85rem; line-height: 1.8; }
-    .container { max-width: 780px; margin: 0 auto; padding: 3rem 1.5rem 6rem; }
-    .opening { border-left: 2px solid #2a2a2a; padding-left: 1rem; color: #777; font-style: italic; font-size: 0.93rem; margin-bottom: 2.5rem; }
-    .section { margin-bottom: 3rem; }
-    h2 { font-size: 1.1rem; font-weight: 700; color: #fff; padding-bottom: 0.6rem; border-bottom: 1px solid #1e1e1e; margin-bottom: 1rem; letter-spacing: 0.01em; }
-    h3 { font-size: 0.82rem; font-weight: 600; color: #bbb; margin: 1.4rem 0 0.5rem; text-transform: uppercase; letter-spacing: 0.07em; }
-    p { color: #999; font-size: 0.93rem; margin-bottom: 0.85rem; }
-    ul { margin: 0.5rem 0 0.85rem 1.1rem; color: #999; font-size: 0.93rem; }
-    ul li { margin-bottom: 0.45rem; }
-    ul li strong { color: #ccc; }
-    a { color: #7eb3ff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .info-box { background: #181818; border: 1px solid #222; border-left: 3px solid #333; border-radius: 4px; padding: 1.1rem 1.3rem; margin: 1rem 0; }
-    .info-box p { margin: 0; font-size: 0.9rem; color: #888; }
-    .regulator { background: #161616; border: 1px solid #1e1e1e; border-radius: 6px; padding: 1.2rem 1.4rem; margin-top: 0.8rem; }
-    .regulator p { margin: 0 0 0.4rem; font-size: 0.9rem; color: #888; }
-    .regulator p:last-child { margin: 0; }
-    .rights-list { list-style: none; margin: 0.8rem 0; padding: 0; }
-    .rights-list li { display: flex; gap: 1rem; padding: 0.7rem 0; border-bottom: 1px solid #1a1a1a; font-size: 0.93rem; color: #999; }
-    .rights-list li:last-child { border-bottom: none; }
-    .right-name { min-width: 130px; font-weight: 600; color: #ccc; font-size: 0.88rem; flex-shrink: 0; }
-    .cta-box { background: #181818; border: 1px solid #222; border-radius: 8px; padding: 2rem; text-align: center; margin-top: 3rem; }
-    .cta-box h3 { color: #fff; font-size: 1rem; font-weight: 700; text-transform: none; letter-spacing: 0; margin-bottom: 0.5rem; }
-    .cta-box p { color: #666; font-size: 0.88rem; margin-bottom: 1.3rem; }
-    .btn { display: inline-block; padding: 0.7rem 2rem; background: #fff; color: #111; font-weight: 700; font-size: 0.85rem; border-radius: 3px; text-decoration: none; letter-spacing: 0.04em; }
-    .btn:hover { background: #ddd; text-decoration: none; }
-    footer { background: #0d0d0d; border-top: 1px solid #1a1a1a; text-align: center; padding: 2rem; color: #3a3a3a; font-size: 0.82rem; }
-    footer a { color: #444; }
-    .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: #0d0d0d; border-top: 1px solid #222; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; z-index: 999; flex-wrap: wrap; }
-    .cookie-banner p { color: #777; font-size: 0.82rem; margin: 0; }
-    .cookie-banner a { color: #999; }
-    .cookie-accept { background: #fff; color: #111; border: none; padding: 0.5rem 1.4rem; font-size: 0.82rem; font-weight: 700; border-radius: 3px; cursor: pointer; white-space: nowrap; letter-spacing: 0.03em; }
-    .cookie-accept:hover { background: #ddd; }
-    @media (max-width: 600px) {
-      nav { padding: 1rem; }
-      .nav-links { gap: 1rem; }
-      .page-header { padding: 2.5rem 1rem 2rem; }
-      .rights-list li { flex-direction: column; gap: 0.3rem; }
-      .right-name { min-width: unset; }
-      .cookie-banner { flex-direction: column; align-items: flex-start; }
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Privacy Policy | Labelex — Label Manufacturer South Africa</title>
+<meta name="description" content="Labelex privacy policy. How we collect, use and protect your personal information in full compliance with POPIA." />
+<meta name="robots" content="noindex, follow" />
+<link rel="canonical" href="https://labelex.co.za/privacy-policy.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" type="image/png" href="img/ui/favicon.png" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://labelex.co.za/" },
+    { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://labelex.co.za/privacy-policy.html" }
+  ]
+}
+</script>
+
+<style>
+  html, body { max-width: 100%; overflow-x: hidden; }
+
+  /* MOBILE MENU (matching homepage) */
+  .mobile-menu { display:none; position:fixed; top:60px; left:0; right:0; bottom:0; background:var(--ink); z-index:49; flex-direction:column; padding:32px 24px; gap:0; overflow-y:auto; }
+  .mobile-menu.open { display:flex; }
+  .mobile-menu a { font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.75); text-decoration:none; padding:20px 0; border-bottom:1px solid rgba(255,255,255,0.08); transition:color 0.2s; }
+  .mobile-menu a:hover { color:#fff; }
+  .mobile-menu .mobile-menu-cta { background:var(--lime); color:#fff; text-align:center; padding:16px 24px; margin-top:28px; border-bottom:none; font-weight:700; border-radius:999px; }
+  .mobile-menu .mobile-menu-cta:hover { background:var(--lime-deep); color:#fff; }
+  .menu-icon.active span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+  .menu-icon.active span:nth-child(2) { opacity:0; }
+  .menu-icon.active span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+  .menu-icon span { transition:transform 0.25s ease, opacity 0.25s ease; }
+
+  /* PRIVACY PAGE LAYOUT */
+  .privacy-meta {
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px; letter-spacing:0.16em; text-transform:uppercase;
+    color:rgba(255,255,255,0.55); line-height:1.8;
+    margin-top:20px; padding-top:20px;
+    border-top:1px solid rgba(255,255,255,0.12);
+  }
+
+  .privacy-wrap { max-width: 820px; }
+
+  .privacy-opening {
+    font-family:'Inter', sans-serif;
+    font-size:17px; line-height:1.7; color:var(--ink-2);
+    padding:24px 28px;
+    background:var(--paper);
+    border-left:3px solid var(--lime);
+    border-radius:2px;
+    margin-bottom:56px;
+  }
+
+  .privacy-section { margin-bottom:48px; }
+  .privacy-section:last-child { margin-bottom:0; }
+
+  .privacy-section h2 {
+    font-family:'Barlow Condensed', sans-serif;
+    font-size:clamp(24px, 3vw, 32px); font-weight:800;
+    line-height:1.1; letter-spacing:-0.01em;
+    color:var(--ink); margin-bottom:18px;
+    padding-bottom:14px; border-bottom:1px solid var(--rule);
+    display:flex; align-items:baseline; gap:14px;
+  }
+  .privacy-section h2 .ps-num {
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px; font-weight:700;
+    letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--lime); flex-shrink:0;
+  }
+
+  .privacy-section h3 {
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px; font-weight:700;
+    letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--ink-2);
+    margin:28px 0 12px;
+  }
+
+  .privacy-section p {
+    font-family:'Inter', sans-serif;
+    font-size:15px; line-height:1.7; color:var(--ink-3);
+    margin-bottom:14px;
+  }
+
+  .privacy-list {
+    list-style:none; padding:0; margin:0 0 18px;
+    font-family:'Inter', sans-serif;
+    font-size:15px; line-height:1.65; color:var(--ink-3);
+  }
+  .privacy-list li {
+    padding:8px 0 8px 22px; position:relative;
+    border-bottom:1px solid var(--rule);
+  }
+  .privacy-list li:last-child { border-bottom:none; }
+  .privacy-list li::before {
+    content:""; position:absolute; left:0; top:18px;
+    width:10px; height:2px; background:var(--lime);
+  }
+  .privacy-list li strong {
+    color:var(--ink); font-weight:700;
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px; letter-spacing:0.1em; text-transform:uppercase;
+    display:inline-block; min-width:140px;
+  }
+
+  .privacy-info-box {
+    background:var(--paper-2);
+    border-left:3px solid var(--lime);
+    padding:18px 22px; margin:18px 0;
+    border-radius:2px;
+  }
+  .privacy-info-box p {
+    margin:0; font-size:14px; color:var(--ink-2);
+    font-style:italic;
+  }
+
+  .privacy-regulator {
+    background:var(--paper-2);
+    border:1px solid var(--rule);
+    padding:22px 26px; margin-top:14px;
+    border-radius:2px;
+  }
+  .privacy-regulator p {
+    margin:0 0 10px; font-size:14px; color:var(--ink-2);
+    line-height:1.6;
+  }
+  .privacy-regulator p:last-child { margin:0; }
+  .privacy-regulator strong {
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px; font-weight:700;
+    letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--ink); display:inline-block; min-width:90px;
+  }
+
+  .privacy-rights {
+    list-style:none; padding:0; margin:18px 0;
+    border:1px solid var(--rule);
+    border-radius:2px; overflow:hidden;
+    background:var(--paper);
+  }
+  .privacy-rights li {
+    display:grid; grid-template-columns:180px 1fr;
+    gap:18px; padding:16px 22px;
+    border-bottom:1px solid var(--rule);
+    font-family:'Inter', sans-serif;
+    font-size:14px; line-height:1.55; color:var(--ink-3);
+  }
+  .privacy-rights li:last-child { border-bottom:none; }
+  .privacy-rights .right-name {
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px; font-weight:700;
+    letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--ink);
+  }
+  @media (max-width: 600px) {
+    .privacy-rights li { grid-template-columns:1fr; gap:4px; }
+  }
+
+  .privacy-section a {
+    color:var(--lime); font-weight:600;
+    text-decoration:underline; text-underline-offset:2px;
+  }
+  .privacy-section a:hover { color:var(--lime-deep); }
+
+  .privacy-cta {
+    margin-top:64px;
+    background:var(--ink); color:#fff;
+    padding:40px 32px; border-radius:4px;
+    text-align:center;
+  }
+  .privacy-cta h3 {
+    font-family:'Barlow Condensed', sans-serif;
+    font-size:clamp(22px, 3vw, 28px); font-weight:800;
+    letter-spacing:-0.01em; color:#fff;
+    margin-bottom:10px; text-transform:none;
+  }
+  .privacy-cta p {
+    font-family:'Inter', sans-serif;
+    font-size:14px; color:rgba(255,255,255,0.65);
+    margin-bottom:24px;
+  }
+  .privacy-cta .btn-primary {
+    display:inline-flex; align-items:center; justify-content:center;
+    gap:12px; padding:16px 32px;
+    background:var(--lime); color:#fff;
+    font-family:'Inter', sans-serif; font-size:13px;
+    font-weight:700; letter-spacing:0.04em; text-transform:uppercase;
+    text-decoration:none; border-radius:999px;
+    transition:background 0.18s;
+  }
+  .privacy-cta .btn-primary:hover { background:var(--lime-deep); }
+</style>
 </head>
 <body>
 
-  <nav>
-    <a href="/" class="nav-logo">LABELEX</a>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/products/">Products</a></li>
-      <li><a href="/about/">About</a></li>
-      <li><a href="/contact/">Contact</a></li>
-    </ul>
-  </nav>
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="./" class="logo">LABEL<span class="ex">EX</span></a>
+    <div class="nav-links">
+      <a href="products/">Products</a>
+      <a href="about/">About</a>
+      <a href="contact/">Contact</a>
+      <a href="blog/">Blog</a>
+    </div>
+    <div class="nav-cta">
+      <a href="contact/#quote-form" class="btn-quote">Get Quote →</a>
+      <div class="menu-icon" id="burgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
 
-  <div class="page-header">
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="products/">Products</a>
+  <a href="about/">About</a>
+  <a href="contact/">Contact</a>
+  <a href="blog/">Blog</a>
+  <a href="contact/#quote-form" class="mobile-menu-cta">Get Quote →</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="wrap page-hero-inner">
+    <div class="crumb">
+      <a href="./">Home</a>
+      <span class="sep">/</span>
+      <span class="current">Privacy Policy</span>
+    </div>
     <h1>Privacy Policy</h1>
-    <div class="meta">
+    <p>How we collect, use and protect your personal information — in full compliance with the Protection of Personal Information Act 4 of 2013 (POPIA).</p>
+    <div class="privacy-meta">
       Smean Distribution (Pty) Ltd, trading as Labelex<br>
       Last updated: May 2026
     </div>
   </div>
+</section>
 
-  <div class="container">
+<!-- CONTENT -->
+<section class="section bone">
+  <div class="wrap privacy-wrap">
 
-    <p class="opening">At Labelex we take your privacy seriously. This policy explains what personal information we collect, why we collect it, who we share it with, and what rights you have over it. We are committed to handling your data responsibly and in full compliance with the Protection of Personal Information Act 4 of 2013 (POPIA).</p>
+    <p class="privacy-opening">At Labelex we take your privacy seriously. This policy explains what personal information we collect, why we collect it, who we share it with, and what rights you have over it. We are committed to handling your data responsibly and in full compliance with the Protection of Personal Information Act 4 of 2013 (POPIA).</p>
 
-    <div class="section">
-      <h2>1. Who We Are</h2>
+    <div class="privacy-section">
+      <h2><span class="ps-num">// 01</span> Who We Are</h2>
       <p>The responsible party for your personal information is:</p>
-      <ul>
-        <li><strong>Registered name:</strong> Smean Distribution (Pty) Ltd</li>
-        <li><strong>Trading as:</strong> Labelex</li>
-        <li><strong>Location:</strong> Gauteng, South Africa</li>
-        <li><strong>Website:</strong> <a href="https://labelex.co.za">www.labelex.co.za</a></li>
-        <li><strong>Email:</strong> <a href="mailto:info@labelex.co.za">info@labelex.co.za</a></li>
-        <li><strong>WhatsApp:</strong> <a href="https://wa.me/27656637333">+27 65 663 7333</a></li>
+      <ul class="privacy-list">
+        <li><strong>Registered name</strong> Smean Distribution (Pty) Ltd</li>
+        <li><strong>Trading as</strong> Labelex</li>
+        <li><strong>Location</strong> Gauteng, South Africa</li>
+        <li><strong>Website</strong> <a href="https://labelex.co.za">www.labelex.co.za</a></li>
+        <li><strong>Email</strong> <a href="mailto:info@labelex.co.za">info@labelex.co.za</a></li>
+        <li><strong>WhatsApp</strong> <a href="https://wa.me/27656637333">+27 65 663 7333</a></li>
       </ul>
       <p>The Information Officer responsible for data compliance can be contacted at <a href="mailto:info@labelex.co.za">info@labelex.co.za</a>.</p>
     </div>
 
-    <div class="section">
-      <h2>2. What Personal Information We Collect</h2>
+    <div class="privacy-section">
+      <h2><span class="ps-num">// 02</span> What Personal Information We Collect</h2>
       <p>We only collect information that is necessary to respond to your enquiry.</p>
       <h3>2.1 Enquiry Form Submissions</h3>
-      <ul>
+      <ul class="privacy-list">
         <li>First name and last name</li>
         <li>Company name</li>
         <li>Email address</li>
@@ -111,7 +282,7 @@
       </ul>
       <h3>2.2 Device and Usage Information</h3>
       <p>Collected automatically when you visit our website:</p>
-      <ul>
+      <ul class="privacy-list">
         <li>IP address</li>
         <li>Browser type and version</li>
         <li>Pages visited and time on site</li>
@@ -121,30 +292,30 @@
       <p>This data is collected via Google Analytics in anonymised, aggregated form. It does not identify you personally.</p>
     </div>
 
-    <div class="section">
-      <h2>3. Why We Collect Your Information</h2>
-      <ul>
+    <div class="privacy-section">
+      <h2><span class="ps-num">// 03</span> Why We Collect Your Information</h2>
+      <ul class="privacy-list">
         <li>To respond to your product enquiry or quote request</li>
         <li>To communicate with you about your label manufacturing requirements</li>
         <li>To understand how our website is used so we can improve it</li>
         <li>To comply with our legal obligations under POPIA</li>
       </ul>
-      <div class="info-box">
+      <div class="privacy-info-box">
         <p>We do not collect your information for unsolicited marketing. We will not contact you with promotional material unless you have specifically requested it. We do not sell, rent, or trade your personal information.</p>
       </div>
     </div>
 
-    <div class="section">
-      <h2>4. How We Collect Your Information</h2>
-      <ul>
-        <li><strong>Directly from you</strong> — when you complete and submit our enquiry form</li>
-        <li><strong>Automatically</strong> — when you visit our website, via Google Analytics cookies</li>
+    <div class="privacy-section">
+      <h2><span class="ps-num">// 04</span> How We Collect Your Information</h2>
+      <ul class="privacy-list">
+        <li><strong>Directly from you</strong> when you complete and submit our enquiry form</li>
+        <li><strong>Automatically</strong> when you visit our website, via Google Analytics cookies</li>
       </ul>
       <p>We do not purchase data, use third-party lists, or collect information from any source other than those described above.</p>
     </div>
 
-    <div class="section">
-      <h2>5. Who We Share Your Information With</h2>
+    <div class="privacy-section">
+      <h2><span class="ps-num">// 05</span> Who We Share Your Information With</h2>
       <p>We do not sell, rent, or trade your personal information. We share your data only with the following service providers and only to the extent necessary:</p>
       <h3>5.1 Formspree</h3>
       <p>Our enquiry form is processed by Formspree (<a href="https://formspree.io" target="_blank" rel="noopener">formspree.io</a>). Formspree securely transmits your submission to our business inbox and does not use your data for any other purpose.</p>
@@ -154,15 +325,15 @@
       <p>We may disclose your information if required by law, court order, or a regulatory authority, or where necessary to protect the rights or safety of Labelex or others.</p>
     </div>
 
-    <div class="section">
-      <h2>6. How Long We Keep Your Information</h2>
+    <div class="privacy-section">
+      <h2><span class="ps-num">// 06</span> How Long We Keep Your Information</h2>
       <p>We retain your enquiry information for as long as reasonably necessary to respond to your request, maintain records of business communications, and comply with applicable legal obligations.</p>
       <p>To request deletion, email <a href="mailto:info@labelex.co.za">info@labelex.co.za</a>. We will action this within a reasonable time unless legally required to retain it.</p>
     </div>
 
-    <div class="section">
-      <h2>7. How We Protect Your Information</h2>
-      <ul>
+    <div class="privacy-section">
+      <h2><span class="ps-num">// 07</span> How We Protect Your Information</h2>
+      <ul class="privacy-list">
         <li>Our website is served exclusively over HTTPS</li>
         <li>Form submissions are processed through Formspree's secure, encrypted infrastructure</li>
         <li>Access to our business inbox is protected by password and two-factor authentication</li>
@@ -171,8 +342,8 @@
       <p>No method of transmission over the internet is 100% secure. While we take all reasonable precautions, we cannot guarantee absolute security of information transmitted electronically.</p>
     </div>
 
-    <div class="section">
-      <h2>8. Cookies</h2>
+    <div class="privacy-section">
+      <h2><span class="ps-num">// 08</span> Cookies</h2>
       <p>A cookie is a small text file stored on your device when you visit a website. Our website uses two types:</p>
       <h3>8.1 Functional Cookies (Session)</h3>
       <p>Essential for the website to load correctly. Temporary — deleted automatically when you close your browser.</p>
@@ -182,10 +353,10 @@
       Learn more about cookies: <a href="https://www.allaboutcookies.org" target="_blank" rel="noopener">www.allaboutcookies.org</a></p>
     </div>
 
-    <div class="section">
-      <h2>9. Your Rights Under POPIA</h2>
+    <div class="privacy-section">
+      <h2><span class="ps-num">// 09</span> Your Rights Under POPIA</h2>
       <p>The Protection of Personal Information Act 4 of 2013 gives you the following rights over your personal information held by Labelex:</p>
-      <ul class="rights-list">
+      <ul class="privacy-rights">
         <li><span class="right-name">Right to access</span><span>Request a copy of the personal information we hold about you</span></li>
         <li><span class="right-name">Right to correct</span><span>Request that we correct or update any inaccurate information</span></li>
         <li><span class="right-name">Right to delete</span><span>Request that we erase your personal information from our records</span></li>
@@ -195,70 +366,125 @@
       <p>To exercise any of these rights contact us at <a href="mailto:info@labelex.co.za">info@labelex.co.za</a> or WhatsApp <a href="https://wa.me/27656637333">+27 65 663 7333</a>. We will respond promptly and in accordance with POPIA.</p>
     </div>
 
-    <div class="section">
-      <h2>10. The Information Regulator</h2>
+    <div class="privacy-section">
+      <h2><span class="ps-num">// 10</span> The Information Regulator</h2>
       <p>If you are not satisfied with how we handle your personal information, you may lodge a complaint with the Information Regulator of South Africa:</p>
-      <div class="regulator">
-        <p><strong>Website:</strong> <a href="https://www.justice.gov.za/inforeg" target="_blank" rel="noopener">www.justice.gov.za/inforeg</a></p>
-        <p><strong>Email:</strong> <a href="mailto:inforeg@justice.gov.za">inforeg@justice.gov.za</a></p>
-        <p><strong>Address:</strong> JD House, 27 Stiemens Street, Braamfontein, Johannesburg, 2001</p>
+      <div class="privacy-regulator">
+        <p><strong>Website</strong> <a href="https://www.justice.gov.za/inforeg" target="_blank" rel="noopener">www.justice.gov.za/inforeg</a></p>
+        <p><strong>Email</strong> <a href="mailto:inforeg@justice.gov.za">inforeg@justice.gov.za</a></p>
+        <p><strong>Address</strong> JD House, 27 Stiemens Street, Braamfontein, Johannesburg, 2001</p>
       </div>
     </div>
 
-    <div class="section">
-      <h2>11. Minors</h2>
+    <div class="privacy-section">
+      <h2><span class="ps-num">// 11</span> Minors</h2>
       <p>Our website is intended for business use only. We do not knowingly collect personal information from individuals under the age of 18. If you believe a minor has submitted information through our website, contact us at <a href="mailto:info@labelex.co.za">info@labelex.co.za</a> and we will delete it without delay.</p>
     </div>
 
-    <div class="section">
-      <h2>12. Third-Party Links</h2>
+    <div class="privacy-section">
+      <h2><span class="ps-num">// 12</span> Third-Party Links</h2>
       <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices of those websites and recommend you read their privacy policies independently.</p>
     </div>
 
-    <div class="section">
-      <h2>13. Updates to This Policy</h2>
+    <div class="privacy-section">
+      <h2><span class="ps-num">// 13</span> Updates to This Policy</h2>
       <p>We review this policy periodically and update it when required. The date of the most recent update is shown at the top of this page. Continued use of our website after any update constitutes your acceptance of the revised policy.</p>
     </div>
 
-    <div class="section">
-      <h2>14. Contact Us</h2>
-      <ul>
-        <li><strong>Email:</strong> <a href="mailto:info@labelex.co.za">info@labelex.co.za</a></li>
-        <li><strong>WhatsApp:</strong> <a href="https://wa.me/27656637333">+27 65 663 7333</a></li>
-        <li><strong>Contact form:</strong> <a href="/contact/">labelex.co.za/contact</a></li>
+    <div class="privacy-section">
+      <h2><span class="ps-num">// 14</span> Contact Us</h2>
+      <ul class="privacy-list">
+        <li><strong>Email</strong> <a href="mailto:info@labelex.co.za">info@labelex.co.za</a></li>
+        <li><strong>WhatsApp</strong> <a href="https://wa.me/27656637333">+27 65 663 7333</a></li>
+        <li><strong>Contact form</strong> <a href="contact/">labelex.co.za/contact</a></li>
       </ul>
       <p>We are committed to resolving any privacy concerns promptly and transparently.</p>
     </div>
 
-    <div class="cta-box">
+    <div class="privacy-cta">
       <h3>Have a question about your data?</h3>
       <p>Contact us directly and we will respond promptly.</p>
-      <a href="/contact/" class="btn">GET IN TOUCH</a>
+      <a href="contact/" class="btn-primary">Get in Touch <span>→</span></a>
     </div>
 
   </div>
+</section>
 
-  <footer>
-    <p>
-      &copy; 2026 Smean Distribution (Pty) Ltd, trading as Labelex &nbsp;|&nbsp; Gauteng, South Africa<br>
-      <a href="/privacy-policy.html">Privacy Policy</a>
-    </p>
-  </footer>
-
-  <div class="cookie-banner" id="cookieBanner">
-    <p>We use cookies to analyse site traffic via Google Analytics. No personal data is collected without your consent. <a href="/privacy-policy.html">Learn more</a></p>
-    <button class="cookie-accept" onclick="acceptCookies()">Accept</button>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:16px;">LABEL<span class="ex">EX</span></div>
+        <p>Labelex is a sticker and label manufacturer based in Gauteng, South Africa. We produce self adhesive labels, heat shrink sleeves and hot melt glue labels for businesses nationwide. 16 years in the label industry.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <a href="products/#adhesive">Adhesive Sticker Labels</a>
+        <a href="products/#shrink">Heat Shrink Sleeves</a>
+        <a href="products/#hotmelt">Hot Melt Labels</a>
+        <a href="products/">All Materials</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about/">About</a>
+        <a href="contact/">Contact</a>
+        <a href="blog/">Blog</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="https://wa.me/27656637333" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:info@labelex.co.za">Email</a>
+        <a href="contact/#quote-form">Quote Form</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Labelex · Label Manufacturer · Gauteng, South Africa</div>
+      <div>Built for procurement.</div>
+    </div>
   </div>
+</footer>
 
-  <script>
-    function acceptCookies() {
-      document.getElementById('cookieBanner').style.display = 'none';
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/27656637333?text=Hi%20Labelex%2C%20I%20have%20a%20question%20about%20your%20privacy%20policy."
+   class="sticky-wa" target="_blank" rel="noopener" aria-label="Chat with Labelex on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  var burger = document.getElementById('burgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', function() {
+    menu.classList.toggle('open');
+    burger.classList.toggle('active');
+  });
+  menu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      menu.classList.remove('open');
+      burger.classList.remove('active');
+    });
+  });
+</script>
+
+<!-- Cookie consent banner -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>We use cookies to analyse site traffic via Google Analytics. No personal data is collected without your consent. <a href="/privacy-policy.html">Learn more</a></p>
+  <button class="cookie-accept" type="button" onclick="acceptCookies()">Accept</button>
+</div>
+<script>
+  (function(){
+    var banner = document.getElementById('cookieBanner');
+    if (!banner) return;
+    if (localStorage.getItem('cookiesAccepted')) { banner.style.display = 'none'; }
+    window.acceptCookies = function() {
+      banner.style.display = 'none';
       localStorage.setItem('cookiesAccepted', 'true');
-    }
-    if (localStorage.getItem('cookiesAccepted')) {
-      document.getElementById('cookieBanner').style.display = 'none';
-    }
-  </script>
+    };
+  })();
+</script>
 
 </body>
 </html>
