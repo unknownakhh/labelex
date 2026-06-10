@@ -1,3 +1,10 @@
 # Internal planning / security docs — kept locally, never published or version-controlled.
 # These live on disk in _internal/ but must stay out of the public repo and the live site.
 _internal/
+
+# Dependencies — never commit
+node_modules/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
