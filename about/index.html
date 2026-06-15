@@ -3,6 +3,25 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<!-- Google tag (gtag.js) — GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FGTS6S2WQT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FGTS6S2WQT');
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp"]').forEach(function (a) {
+      a.addEventListener('click', function () { gtag('event', 'whatsapp_click'); });
+    });
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function (a) {
+      a.addEventListener('click', function () { gtag('event', 'email_click'); });
+    });
+    var qf = document.getElementById('quoteForm');
+    if (qf) qf.addEventListener('submit', function () { gtag('event', 'generate_lead'); });
+  });
+</script>
 <title>Label Manufacturer South Africa — About Labelex</title>
 <meta name="description" content="Labelex is a label manufacturer based in Gauteng, South Africa. 16 years in the label business. Self adhesive labels, shrink sleeves and hot melt labels nationwide." />
 <link rel="canonical" href="https://labelex.co.za/about/" />

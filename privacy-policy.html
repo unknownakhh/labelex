@@ -3,6 +3,25 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<!-- Google tag (gtag.js) — GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FGTS6S2WQT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FGTS6S2WQT');
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp"]').forEach(function (a) {
+      a.addEventListener('click', function () { gtag('event', 'whatsapp_click'); });
+    });
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function (a) {
+      a.addEventListener('click', function () { gtag('event', 'email_click'); });
+    });
+    var qf = document.getElementById('quoteForm');
+    if (qf) qf.addEventListener('submit', function () { gtag('event', 'generate_lead'); });
+  });
+</script>
 <title>Privacy Policy | Labelex — Label Manufacturer South Africa</title>
 <meta name="description" content="Labelex privacy policy. How we collect, use and protect your personal information in full compliance with POPIA." />
 <meta name="robots" content="noindex, follow" />
