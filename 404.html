@@ -5,20 +5,222 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Page Not Found (404) | Labelex</title>
 <meta name="robots" content="noindex, follow" />
-<meta name="description" content="The page you were looking for could not be found. Browse Labelex products or get back to the homepage." />
+<meta name="description" content="The page you were looking for could not be found. Browse Labelex label products or head back to the homepage." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/styles.css">
 <link rel="icon" type="image/png" href="/img/ui/labelex-favicon.png" />
 <style>
-  .e404 { min-height: calc(100vh - 60px); display: flex; align-items: center; justify-content: center; text-align: center; padding: 80px 20px; }
-  .e404-inner { max-width: 600px; }
-  .e404-code { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: clamp(96px, 22vw, 200px); line-height: 0.9; letter-spacing: -0.03em; color: var(--ink); margin: 0; }
-  .e404-code .ex { color: var(--lime); }
-  .e404 h1 { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: clamp(28px, 5vw, 40px); letter-spacing: -0.01em; margin: 16px 0 12px; }
-  .e404 p { font-size: 17px; line-height: 1.6; color: var(--ink-2); margin: 0 auto 32px; max-width: 460px; }
-  .e404-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  /* MOBILE MENU (shared pattern) */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px; left: 0; right: 0; bottom: 0;
+    background: var(--ink);
+    z-index: 49;
+    flex-direction: column;
+    padding: 32px 24px;
+    gap: 0;
+    overflow-y: auto;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    transition: color 0.2s;
+  }
+  .mobile-menu a:hover { color: #fff; }
+  .mobile-menu .mobile-menu-cta {
+    background: var(--lime); color: #fff;
+    text-align: center; padding: 16px 24px;
+    margin-top: 28px; border-bottom: none;
+    font-weight: 700; border-radius: 999px;
+  }
+  .mobile-menu .mobile-menu-cta:hover { background: var(--lime-deep); color: #fff; }
+  .menu-icon.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-icon.active span:nth-child(2) { opacity: 0; }
+  .menu-icon.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .menu-icon span { transition: transform 0.25s ease, opacity 0.25s ease; }
+
+  /* ===== 404 — branded dark hero ===== */
+  .e404 {
+    position: relative;
+    background: var(--ink);
+    color: #fff;
+    overflow: hidden;
+    padding: 120px 0 96px;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+  }
+  /* Blueprint grid overlay — same motif as the home final-cta */
+  .e404::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
+  }
+  /* Soft orange glow behind the code */
+  .e404::after {
+    content: "";
+    position: absolute;
+    top: -10%; left: 50%;
+    width: 720px; height: 720px;
+    max-width: 110vw;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(237,107,31,0.16) 0%, rgba(237,107,31,0) 62%);
+    pointer-events: none;
+  }
+  .e404-wrap { position: relative; z-index: 2; max-width: 760px; text-align: center; }
+
+  .e404-stamp {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(255,255,255,0.16);
+    background: rgba(255,255,255,0.04);
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.72);
+    margin-bottom: 36px;
+  }
+  .e404-stamp .dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--lime);
+    margin-right: 10px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  /* Giant 404 — middle digit as the brand's orange registration tile */
+  .e404-code {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 900;
+    font-size: clamp(108px, 26vw, 248px);
+    line-height: 0.82;
+    letter-spacing: -0.04em;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: clamp(8px, 2vw, 20px);
+  }
+  .e404-code .ex {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--lime);
+    color: #fff;
+    padding: 0 clamp(10px, 2.4vw, 26px);
+    border-radius: 6px;
+    transform: rotate(-3deg);
+  }
+  /* Registration-mark corners — echoes the Labelex logo lockup */
+  .e404-code .ex::before, .e404-code .ex::after {
+    content: ""; position: absolute;
+    width: clamp(10px, 2vw, 18px); height: clamp(10px, 2vw, 18px);
+    border: 2px solid rgba(255,255,255,0.9);
+    background: transparent;
+  }
+  .e404-code .ex::before { top: -7px; left: -7px; border-right: none; border-bottom: none; }
+  .e404-code .ex::after  { bottom: -7px; right: -7px; border-left: none; border-top: none; }
+
+  .e404 h1 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 800;
+    font-size: clamp(30px, 5.4vw, 52px);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin: 32px 0 16px;
+    color: #fff;
+  }
+  .e404 h1 .hl { color: var(--lime); }
+  .e404 .e404-sub {
+    font-size: clamp(15px, 2vw, 18px);
+    line-height: 1.6;
+    color: rgba(255,255,255,0.68);
+    margin: 0 auto 36px;
+    max-width: 500px;
+  }
+  .e404-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+  /* Light ghost button — the standard .btn-ghost is dark-on-light, invisible here */
+  .btn-ghost-light {
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    border-radius: 999px;
+  }
+  .btn-ghost-light:hover { background: #fff; color: var(--ink); border-color: #fff; }
+
+  /* Popular destinations */
+  .e404-links-head {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .e404-links-head::before,
+  .e404-links-head::after { content: ""; width: 24px; height: 2px; background: var(--lime); }
+
+  .e404-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+  }
+  @media (min-width: 720px) { .e404-links { grid-template-columns: 1fr 1fr; } }
+  .e404-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 24px;
+    background: var(--ink);
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.2s;
+  }
+  .e404-link:hover { background: rgba(237,107,31,0.14); }
+  .e404-link:hover .e404-link-arrow { transform: translateX(6px); }
+  .e404-link-k {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: rgba(255,255,255,0.45); margin-bottom: 6px;
+  }
+  .e404-link h4 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 21px; font-weight: 800; letter-spacing: -0.01em; color: #fff;
+  }
+  .e404-link p { font-size: 13px; color: rgba(255,255,255,0.6); margin-top: 4px; }
+  .e404-link-arrow { font-size: 22px; color: var(--lime); transition: transform 0.2s; flex-shrink: 0; }
 </style>
 </head>
 <body>
@@ -35,22 +237,132 @@
     </div>
     <div class="nav-cta">
       <a href="/contact/#quote-form" class="btn-quote">Get Quote →</a>
+      <div class="menu-icon" id="burgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </div>
     </div>
   </div>
 </nav>
 
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/products/">Products</a>
+  <a href="/about/">About</a>
+  <a href="/contact/">Contact</a>
+  <a href="/blog/">Blog</a>
+  <a href="/contact/#quote-form" class="mobile-menu-cta">Get Quote →</a>
+</div>
+
 <!-- 404 -->
 <main class="e404">
-  <div class="e404-inner">
-    <p class="e404-code">4<span class="ex">0</span>4</p>
-    <h1>Page not found</h1>
-    <p>The page you were looking for doesn't exist or has moved. Let's get you back on track — head to the homepage or browse our label products.</p>
+  <div class="wrap e404-wrap">
+    <div class="e404-stamp"><span class="dot"></span>Error 404 · Page Not Found</div>
+
+    <div class="e404-code">4<span class="ex">0</span>4</div>
+
+    <h1>This label <span class="hl">came unstuck.</span></h1>
+    <p class="e404-sub">The page you were after has peeled off, moved, or never existed. Let's get you back to something that sticks.</p>
+
     <div class="e404-actions">
-      <a href="/" class="btn-primary">← Back to home</a>
-      <a href="/products/" class="btn-ghost">View products</a>
+      <a href="/" class="btn btn-primary">Back to Home <span class="arrow">→</span></a>
+      <a href="/products/" class="btn btn-ghost-light">View Products <span class="arrow">→</span></a>
+    </div>
+
+    <div class="e404-links-head">Popular Destinations</div>
+    <div class="e404-links">
+      <a href="/products/" class="e404-link">
+        <div>
+          <div class="e404-link-k">01 · Range</div>
+          <h4>Our Label Range</h4>
+          <p>Adhesive, heat shrink and hot melt labels.</p>
+        </div>
+        <span class="e404-link-arrow">→</span>
+      </a>
+      <a href="/contact/#quote-form" class="e404-link">
+        <div>
+          <div class="e404-link-k">02 · Quote</div>
+          <h4>Request a Quote</h4>
+          <p>Send the brief — reply within 24 hours.</p>
+        </div>
+        <span class="e404-link-arrow">→</span>
+      </a>
+      <a href="/about/" class="e404-link">
+        <div>
+          <div class="e404-link-k">03 · About</div>
+          <h4>About Labelex</h4>
+          <p>16 years manufacturing labels in Gauteng.</p>
+        </div>
+        <span class="e404-link-arrow">→</span>
+      </a>
+      <a href="/blog/" class="e404-link">
+        <div>
+          <div class="e404-link-k">04 · Blog</div>
+          <h4>Labelling Guides</h4>
+          <p>Substrate advice and label insights.</p>
+        </div>
+        <span class="e404-link-arrow">→</span>
+      </a>
     </div>
   </div>
 </main>
 
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:16px;"><img src="/img/logo/labelex-website-logo.png" alt="Labelex — Custom Label Manufacturing"></div>
+        <p>Labelex is a sticker and label manufacturer based in Gauteng, South Africa. We produce self adhesive labels, heat shrink sleeves and hot melt glue labels for businesses nationwide. 16 years in the label industry.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <a href="/products/#adhesive">Adhesive Sticker Labels</a>
+        <a href="/products/#shrink">Heat Shrink Sleeves</a>
+        <a href="/products/#hotmelt">Hot Melt Labels</a>
+        <a href="/products/">All Materials</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/blog/">Blog</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="https://wa.me/27789852732" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:info@labelex.co.za">Email</a>
+        <a href="/contact/#quote-form">Quote Form</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Labelex · Label Manufacturer · Gauteng, South Africa</div>
+      <div>Built for procurement.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/27789852732?text=Hi%20Labelex%2C%20I%20found%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20label%20products."
+   class="sticky-wa" target="_blank" rel="noopener" aria-label="Chat with Labelex on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  var burger = document.getElementById('burgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', function() {
+    menu.classList.toggle('open');
+    burger.classList.toggle('active');
+  });
+  menu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      menu.classList.remove('open');
+      burger.classList.remove('active');
+    });
+  });
+</script>
 </body>
 </html>
