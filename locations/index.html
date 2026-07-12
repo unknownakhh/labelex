@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<!-- Google tag (gtag.js) — GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FGTS6S2WQT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FGTS6S2WQT');
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp"]').forEach(function (a) {
+      a.addEventListener('click', function () { gtag('event', 'whatsapp_click'); });
+    });
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function (a) {
+      a.addEventListener('click', function () { gtag('event', 'email_click'); });
+    });
+  });
+</script>
+<title>Label Manufacturer Locations Across South Africa | Labelex</title>
+<meta name="description" content="Labelex supplies custom labels across South Africa. Find your city — Cape Town, Johannesburg or Pretoria — for local label printing, nationwide delivery." />
+<link rel="canonical" href="https://labelex.co.za/locations/" />
+<meta name="robots" content="index, follow" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Label Manufacturers by Location | Labelex" />
+<meta property="og:description" content="Custom label printing for businesses across South Africa. Cape Town, Johannesburg and Pretoria, with nationwide delivery. MOQ R3,000." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://labelex.co.za/locations/" />
+<meta property="og:image" content="https://labelex.co.za/img/home/LabelExFactory.webp" />
+<meta property="og:site_name" content="Labelex" />
+<meta property="og:locale" content="en_ZA" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Label Manufacturers by Location | Labelex" />
+<meta name="twitter:description" content="Custom label printing for businesses across South Africa. Cape Town, Johannesburg and Pretoria." />
+<meta name="twitter:image" content="https://labelex.co.za/img/home/LabelExFactory.webp" />
+
+<!-- BreadcrumbList Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://labelex.co.za/" },
+    { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://labelex.co.za/locations/" }
+  ]
+}
+</script>
+
+<!-- ItemList Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Labelex Service Locations",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Label Manufacturers Cape Town", "url": "https://labelex.co.za/locations/cape-town/" },
+    { "@type": "ListItem", "position": 2, "name": "Label Manufacturers Johannesburg", "url": "https://labelex.co.za/locations/johannesburg/" },
+    { "@type": "ListItem", "position": 3, "name": "Label Manufacturers Pretoria", "url": "https://labelex.co.za/locations/pretoria/" }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="icon" type="image/png" href="/img/ui/labelex-favicon.png" />
+
+<style>
+html, body { max-width: 100%; overflow-x: hidden; }
+
+/* MOBILE MENU */
+.mobile-menu {
+  display: none; position: fixed;
+  top: 60px; left: 0; right: 0; bottom: 0;
+  background: var(--ink); z-index: 49;
+  flex-direction: column; padding: 32px 24px;
+  gap: 0; overflow-y: auto;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: rgba(255,255,255,0.75);
+  text-decoration: none; padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08); transition: color 0.2s;
+}
+.mobile-menu a:hover { color: #fff; }
+.mobile-menu .mobile-menu-cta {
+  background: var(--lime); color: #fff; text-align: center;
+  padding: 16px 24px; margin-top: 28px; border-bottom: none;
+  font-weight: 700; border-radius: 999px;
+}
+.menu-icon.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-icon.active span:nth-child(2) { opacity: 0; }
+.menu-icon.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.menu-icon span { transition: transform 0.25s ease, opacity 0.25s ease; }
+
+/* HERO */
+.loc-hero {
+  background: var(--ink);
+  padding: 120px 0 72px;
+  position: relative; overflow: hidden;
+}
+@media (min-width: 768px) { .loc-hero { padding: 150px 0 88px; } }
+.loc-hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 80px 80px; pointer-events: none;
+}
+.loc-hero-inner { position: relative; z-index: 2; }
+.loc-crumb {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 28px; display: flex; gap: 12px; align-items: center;
+}
+.loc-crumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.18s; }
+.loc-crumb a:hover { color: #fff; }
+.loc-crumb .sep { opacity: 0.3; }
+.loc-crumb .current { color: rgba(255,255,255,0.8); font-weight: 700; }
+.loc-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--lime); margin-bottom: 20px;
+  display: flex; align-items: center; gap: 10px;
+}
+.loc-eyebrow::before { content: ""; width: 18px; height: 2px; background: var(--lime); }
+.loc-hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 800; line-height: 0.97;
+  letter-spacing: -0.02em; color: #fff;
+  margin-bottom: 24px; max-width: 900px;
+}
+.loc-hero h1 .hl { background: var(--lime); color: #fff; padding: 0 10px; display: inline-block; }
+.loc-hero-lead {
+  font-size: clamp(15px, 1.6vw, 17px);
+  color: rgba(255,255,255,0.65);
+  line-height: 1.65; max-width: 640px; margin-bottom: 0;
+}
+.loc-hero-lead strong { color: #fff; font-weight: 600; }
+
+/* LOCATION CARDS */
+.loc-index { padding: 72px 0; background: var(--paper); border-bottom: 1px solid var(--rule); }
+.loc-index h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(28px, 4vw, 44px); font-weight: 800;
+  line-height: 1.0; letter-spacing: -0.015em;
+  color: var(--ink); margin-bottom: 20px;
+}
+.loc-index h2 .hl { background: var(--lime); color: #fff; padding: 0 8px; display: inline-block; }
+.loc-index > .wrap > p {
+  font-size: 16px; color: var(--ink-3); line-height: 1.7; max-width: 760px; margin-bottom: 0;
+}
+.loc-grid {
+  display: grid; grid-template-columns: 1fr; gap: 0;
+  border: 1px solid var(--rule); margin-top: 44px;
+}
+@media (min-width: 768px) { .loc-grid { grid-template-columns: repeat(3, 1fr); } }
+.loc-card {
+  padding: 34px 30px 30px;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+  display: flex; flex-direction: column; gap: 14px;
+  text-decoration: none; transition: background 0.18s;
+}
+@media (min-width: 768px) { .loc-card:nth-child(3n) { border-right: none; } }
+@media (max-width: 767px) { .loc-card { border-right: none; } }
+.loc-card:hover { background: var(--ink); }
+.loc-card-region {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--lime);
+}
+.loc-card-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(28px, 3vw, 36px); font-weight: 800;
+  letter-spacing: -0.015em; line-height: 1.0;
+  color: var(--ink); transition: color 0.18s;
+}
+.loc-card:hover .loc-card-name { color: #fff; }
+.loc-card-desc { font-size: 13px; color: var(--ink-3); line-height: 1.6; flex: 1; transition: color 0.18s; }
+.loc-card:hover .loc-card-desc { color: rgba(255,255,255,0.65); }
+.loc-card-areas {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--ink-3);
+  padding-top: 14px; border-top: 1px solid var(--rule);
+  transition: color 0.18s, border-color 0.18s; line-height: 1.6;
+}
+.loc-card:hover .loc-card-areas { color: rgba(255,255,255,0.45); border-top-color: rgba(255,255,255,0.12); }
+.loc-card-link {
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--lime); margin-top: 4px;
+}
+
+/* NATIONAL NOTE */
+.loc-national { padding: 64px 0; background: var(--paper-2); border-bottom: 1px solid var(--rule); }
+.loc-national h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(24px, 3vw, 36px); font-weight: 800;
+  letter-spacing: -0.015em; color: var(--ink); margin-bottom: 16px;
+}
+.loc-national p { font-size: 16px; color: var(--ink-3); line-height: 1.7; max-width: 760px; margin: 0; }
+
+/* CTA BAND */
+.loc-cta-band { background: var(--ink); padding: 72px 0; position: relative; overflow: hidden; }
+.loc-cta-band::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 80px 80px; pointer-events: none;
+}
+.loc-cta-inner {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 48px; align-items: center;
+}
+@media (max-width: 700px) { .loc-cta-inner { grid-template-columns: 1fr; } }
+.loc-cta-band .eyebrow { color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+.loc-cta-band .eyebrow::before { background: var(--lime); }
+.loc-cta-band h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(32px, 5vw, 56px); font-weight: 800;
+  line-height: 0.97; letter-spacing: -0.02em; color: #fff; margin-bottom: 16px;
+}
+.loc-cta-band p { font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.65; max-width: 560px; }
+.loc-cta-btns { display: flex; flex-direction: column; gap: 10px; flex-shrink: 0; }
+.lcb-wa {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 8px; padding: 16px 28px;
+  background: #25d366; border: 1px solid #25d366; color: #fff;
+  font-family: 'Inter', sans-serif; font-size: 13px;
+  font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+  text-decoration: none; border-radius: 999px;
+  transition: background 0.18s, border-color 0.18s; white-space: nowrap;
+}
+.lcb-wa:hover { background: #1da851; border-color: #1da851; }
+.lcb-primary {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 10px; padding: 16px 28px;
+  background: var(--lime); color: #fff;
+  font-family: 'Inter', sans-serif; font-size: 13px;
+  font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+  text-decoration: none; border-radius: 999px;
+  transition: background 0.18s; white-space: nowrap;
+}
+.lcb-primary:hover { background: var(--lime-deep); }
+.lcb-email {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 8px; padding: 14px 28px;
+  border: 1px solid rgba(255,255,255,0.4); color: #fff;
+  font-family: 'Inter', sans-serif; font-size: 13px;
+  font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+  text-decoration: none; border-radius: 999px;
+  transition: background 0.18s, border-color 0.18s; white-space: nowrap;
+}
+.lcb-email:hover { background: rgba(255,255,255,0.05); border-color: #fff; }
+
+/* FOOTER LOCATIONS COLUMN */
+@media (min-width: 768px) { .footer-top { grid-template-columns: 2fr 1fr 1fr 1fr 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo"><img src="/img/logo/labelex-website-logo.png" alt="Labelex — Custom Label Manufacturing" width="1344" height="357"></a>
+    <div class="nav-links">
+      <a href="/products/">Products</a>
+      <a href="/about/">About</a>
+      <a href="/portfolio/">Portfolio</a>
+      <a href="/contact/">Contact</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <div class="nav-cta">
+      <a href="/contact/#quote-form" class="btn-quote">Get Quote →</a>
+      <div class="menu-icon" id="burgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/products/">Products</a>
+  <a href="/about/">About</a>
+  <a href="/portfolio/">Portfolio</a>
+  <a href="/contact/">Contact</a>
+  <a href="/blog/">Blog</a>
+  <a href="/contact/#quote-form" class="mobile-menu-cta">Get Quote →</a>
+</div>
+
+<!-- HERO -->
+<section class="loc-hero">
+  <div class="wrap">
+    <div class="loc-hero-inner">
+      <div class="loc-crumb">
+        <a href="/">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Locations</span>
+      </div>
+      <div class="loc-eyebrow">Label manufacturers across South Africa</div>
+      <h1>Custom labels, <span class="hl">wherever you are.</span></h1>
+      <p class="loc-hero-lead">
+        Labelex supplies <strong>self adhesive labels</strong>, <strong>heat shrink sleeves</strong> and <strong>hot melt glue labels</strong> to businesses across South Africa. Pick your city below for label printing tailored to your industry, with nationwide delivery and no location surcharge. MOQ R3,000.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span>WINE</span><span>CRAFT BEER</span><span>COSMETICS</span><span>FMCG</span><span>FOOD</span><span>BEVERAGE</span><span>SUPPLEMENTS</span><span>PACKAGING</span><span>EXPORT</span>
+    <span>WINE</span><span>CRAFT BEER</span><span>COSMETICS</span><span>FMCG</span><span>FOOD</span><span>BEVERAGE</span><span>SUPPLEMENTS</span><span>PACKAGING</span><span>EXPORT</span>
+  </div>
+</div>
+
+<!-- LOCATION CARDS -->
+<section class="loc-index">
+  <div class="wrap">
+    <div class="eyebrow dark" style="margin-bottom:20px;">Choose your city</div>
+    <h2>Find your <span class="hl">location.</span></h2>
+    <p>Each of our location pages is built around the industries and label requirements specific to that region. Choose the page closest to you to get started, or reach out directly for a quote.</p>
+
+    <div class="loc-grid">
+
+      <a href="/locations/cape-town/" class="loc-card">
+        <div class="loc-card-region">Western Cape</div>
+        <div class="loc-card-name">Cape Town</div>
+        <div class="loc-card-desc">Wine, craft beer, seafood export and natural cosmetics. Premium-grade labels for the Cape's most brand-conscious industries, delivered across the Western Cape.</div>
+        <div class="loc-card-areas">Stellenbosch · Paarl · Franschhoek · Epping · Somerset West</div>
+        <div class="loc-card-link"><span>View Cape Town</span><span>→</span></div>
+      </a>
+
+      <a href="/locations/johannesburg/" class="loc-card">
+        <div class="loc-card-region">Gauteng</div>
+        <div class="loc-card-name">Johannesburg</div>
+        <div class="loc-card-desc">The commercial and manufacturing heart of South Africa. FMCG, food, beverage, cosmetics and industrial labels at volume, delivered across the Reef.</div>
+        <div class="loc-card-areas">Sandton · Midrand · Isando · Roodepoort · East Rand</div>
+        <div class="loc-card-link"><span>View Johannesburg</span><span>→</span></div>
+      </a>
+
+      <a href="/locations/pretoria/" class="loc-card">
+        <div class="loc-card-region">Gauteng</div>
+        <div class="loc-card-name">Pretoria</div>
+        <div class="loc-card-desc">Food producers, pharmaceutical and cosmetic brands, and manufacturers across Tshwane. Compliant, durable labels with fast turnaround.</div>
+        <div class="loc-card-areas">Centurion · Rosslyn · Silverton · Hatfield · Menlyn</div>
+        <div class="loc-card-link"><span>View Pretoria</span><span>→</span></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- NATIONAL NOTE -->
+<section class="loc-national">
+  <div class="wrap">
+    <h2>Not in one of these cities?</h2>
+    <p>We deliver custom labels to businesses nationwide through our courier network, at the same rate and turnaround wherever you are. If your city is not listed yet, <a href="/contact/" style="color:var(--ink);font-weight:600;text-decoration:underline;">contact us</a> and we will confirm delivery and lead time to your address. Prefer to see samples first? We can arrange a meetup and bring a range for you to choose from.</p>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="loc-cta-band">
+  <div class="wrap">
+    <div class="loc-cta-inner">
+      <div>
+        <div class="eyebrow">Get a Fast Quote</div>
+        <h2>Ready for a label<br/>quote?</h2>
+        <p>Tell us your label specification and we get back to you with a price and lead time within one business day. No meetings, no delay.</p>
+      </div>
+      <div class="loc-cta-btns">
+        <a href="https://wa.me/27789852732?text=Hi%20Labelex%2C%20I%20found%20your%20website%20and%20would%20like%20to%20enquire%20about%20label%20printing."
+           class="lcb-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+        <a href="/contact/#quote-form" class="lcb-primary">Request a Quote →</a>
+        <a href="mailto:info@labelex.co.za" class="lcb-email">Email Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:16px;"><img src="/img/logo/labelex-website-logo.png" alt="Custom label manufacturer serving businesses across South Africa" width="1344" height="357"></div>
+        <p>Labelex is a specialist sticker and label manufacturer serving businesses across South Africa. We produce self adhesive labels, heat shrink sleeves and hot melt glue labels, delivered nationwide. 16 years in the label industry.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <a href="/products/#adhesive">Adhesive Sticker Labels</a>
+        <a href="/products/#shrink">Heat Shrink Sleeves</a>
+        <a href="/products/#hotmelt">Hot Melt Labels</a>
+        <a href="/products/">All Materials</a>
+      </div>
+      <div class="footer-col">
+        <h5>Locations</h5>
+        <a href="/locations/cape-town/">Cape Town</a>
+        <a href="/locations/johannesburg/">Johannesburg</a>
+        <a href="/locations/pretoria/">Pretoria</a>
+        <a href="/locations/">All Locations</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/blog/">Blog</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="https://wa.me/27789852732" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:info@labelex.co.za">Email</a>
+        <a href="/contact/#quote-form">Quote Form</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Labelex · Label Manufacturer · Gauteng, South Africa</div>
+      <div>Built for procurement.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/27789852732?text=Hi%20Labelex%2C%20I%20found%20your%20website%20and%20would%20like%20to%20enquire%20about%20label%20printing."
+   class="sticky-wa" target="_blank" rel="noopener" aria-label="Chat with Labelex on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  var burger = document.getElementById('burgerBtn');
+  var menu   = document.getElementById('mobileMenu');
+  burger.addEventListener('click', function() {
+    menu.classList.toggle('open');
+    burger.classList.toggle('active');
+  });
+  menu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      menu.classList.remove('open');
+      burger.classList.remove('active');
+    });
+  });
+</script>
+<!-- Cookie consent banner -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>We use cookies to analyse site traffic via Google Analytics. No personal data is collected without your consent. <a href="/privacy-policy.html">Learn more</a></p>
+  <button class="cookie-accept" type="button" onclick="acceptCookies()">Accept</button>
+</div>
+<script>
+  (function(){
+    var banner = document.getElementById('cookieBanner');
+    if (!banner) return;
+    if (localStorage.getItem('cookiesAccepted')) { banner.style.display = 'none'; }
+    window.acceptCookies = function() {
+      banner.style.display = 'none';
+      localStorage.setItem('cookiesAccepted', 'true');
+    };
+  })();
+</script>
+</body>
+</html>

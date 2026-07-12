@@ -1,0 +1,6 @@
+# Cloudflare Pages redirects
+# Old gallery page was renamed to /portfolio/ — send old links + Google there.
+# 301 = permanent move (passes SEO link equity to the new URL).
+/gallery/    /portfolio/    301
+/gallery     /portfolio/    301
+/gallery/*   /portfolio/    301
